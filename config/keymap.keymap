@@ -20,11 +20,11 @@
 
         layer_0 {
             bindings = <
-&trans  &trans     &trans    &trans    &trans    &trans                                                         &trans       &trans  &trans     &trans    &trans                &trans
-&trans  &kp Q      &kp W     &kp E     &kp R     &kp T                                                          &kp Y        &kp U   &kp I      &kp O     &kp P                 &trans
-&trans  &kp A      &kp S     &kp D     &kp F     &kp G        &trans                     &trans                 &kp H        &kp J   &kp K      &kp L     &kp SEMI              &trans
-&trans  &kp Z      &kp X     &kp C     &kp V     &kp B        &kp SPACE                  &kp RET                &kp N        &kp M   &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &trans
-&trans  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &lt 2 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &mt RSHIFT LANGUAGE_2  &lt 3 ENTER  &trans  &trans     &kp RGUI  &kp RCTRL             &trans
+&trans  &trans     &trans    &trans    &trans    &trans                                                         &trans       &trans  &trans    &trans    &trans     &trans
+&trans  &kp Q      &kp W     &kp E     &kp R     &kp T                                                          &kp Y        &kp U   &kp I     &kp O     &kp P      &trans
+&trans  &kp A      &kp S     &kp D     &kp F     &kp G        &trans                     &trans                 &kp H        &kp J   &kp K     &kp L     &kp MINUS  &trans
+&trans  &kp Z      &kp X     &kp C     &kp V     &kp B        &kp SPACE                  &kp RET                &kp N        &kp M   &mkp MB1  &mkp MB2  &mkp MB3   &trans
+&trans  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &lt 2 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &mt RSHIFT LANGUAGE_2  &lt 3 ENTER  &trans  &trans    &kp RGUI  &kp ENTER  &trans
             >;
         };
 
