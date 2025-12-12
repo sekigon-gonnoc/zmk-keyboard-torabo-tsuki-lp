@@ -20,35 +20,35 @@
 
         layer_0 {
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                                                         &kp N6       &kp N7    &kp N8     &kp N9    &kp N0                &kp BSPC
-&kp TAB    &kp Q      &kp W     &kp E     &kp R     &kp T                                                          &kp Y        &kp U     &kp I      &kp O     &kp P                 &kp BSPC
-&kp CAPS   &kp A      &kp S     &kp D     &kp F     &kp G        &mkp LCLK                  &mkp RCLK              &kp H        &kp J     &kp K      &kp L     &kp SEMI              &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V     &kp B        &kp SPACE                  &kp RET                &kp N        &kp M     &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &kp RSHFT
-&kp LCTRL  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &lt 2 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &mt RSHIFT LANGUAGE_2  &lt 3 ENTER  &kp BSPC  &kp RALT   &kp RGUI  &lt 4 RSHIFT          &kp RCTRL
+&trans  &trans     &trans    &trans    &trans      &trans                                      &trans     &trans  &trans       &trans   &trans             &trans
+&trans  &kp Q      &kp W     &kp E     &kp R       &kp T                                       &kp Y      &kp U   &kp I        &kp O    &kp P              &trans
+&trans  &kp A      &kp S     &kp D     &kp F       &kp G      &trans            &trans         &kp H      &kp J   &kp K        &kp L    &lt 4 EXCLAMATION  &trans
+&trans  &kp Z      &kp X     &kp C     &kp V       &kp B      &kp TAB           &kp BACKSPACE  &kp N      &kp M   &lt 5 COMMA  &kp DOT  &kp SLASH          &trans
+&trans  &kp LCTRL  &kp LGUI  &kp LALT  &kp LSHIFT  &kp SPACE  &lt 2 LANGUAGE_2  &lt 1 LANG4    &kp ENTER  &trans  &trans       &to 3    &lt 6 PRINTSCREEN  &trans
             >;
         };
 
-        layer_1 {
+        Arrow_Number {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans           &trans  &trans   &trans  &trans                         &trans      &trans          &trans          &trans           &trans  &trans
+&trans  &kp KP_MULTIPLY  &kp N7  &kp N8   &kp N9  &kp PLUS                       &trans      &trans          &kp UP_ARROW    &trans           &trans  &trans
+&trans  &kp SLASH        &kp N4  &kp N5   &kp N6  &kp MINUS  &trans  &trans      &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans           &kp N1  &kp N2   &kp N3  &kp EQUAL  &trans  &kp K_NEXT  &kp K_PREV  &trans          &trans          &trans           &trans  &trans
+&trans  &trans           &kp N0  &kp DOT  &trans  &trans     &trans  &trans      &trans      &trans          &trans          &trans           &trans  &trans
             >;
         };
 
-        layer_2 {
+        Kigou {
             bindings = <
-&trans  &trans            &trans            &trans      &trans      &trans                      &trans          &trans         &trans            &trans             &trans         &trans
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                  &kp LS(N6)      &kp LS(N7)     &kp LS(N8)        &kp LS(N9)         &kp LS(N0)     &trans
-&trans  &kp N1            &kp N2            &kp N3      &kp N4      &kp N5      &trans  &trans  &kp LEFT_BRACE  &kp MINUS      &kp EQUAL         &kp RIGHT_BRACE    &kp COLON      &trans
-&trans  &kp N6            &kp N7            &kp N8      &kp N9      &kp N0      &trans  &trans  &kp LS(MINUS)   &kp LS(EQUAL)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
-&trans  &trans            &trans            &trans      &trans      &trans      &trans  &trans  &kp TAB         &kp DEL        &trans            &trans             &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7  &kp F8  &kp F9   &kp F10  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F11  &kp F12  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
             >;
         };
 
-        layer_3 {
+        Left_hand_device {
             bindings = <
 &trans  &trans   &trans   &trans        &trans        &trans                      &trans            &trans     &trans         &trans     &trans      &trans
 &trans  &kp F1   &kp F2   &kp F3        &kp F4        &kp F5                      &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
@@ -58,7 +58,27 @@
             >;
         };
 
-        layer_4 {
+        Auto_Mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans
+            >;
+        };
+
+        Auto_scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        bluetooth {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans        &trans          &trans        &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &trans  &trans  &trans
