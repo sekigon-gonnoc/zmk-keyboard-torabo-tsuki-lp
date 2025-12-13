@@ -9,24 +9,10 @@
         };
     };
 
-    /*
-     * Trackball split listener
-     * - XY invert は常に有効
-     * - Layer 5 にいる間はスクロールモード
-     */
     trackball_split_listener: trackball_split_listener {
-        compatible = "zmk,kscan-transform-listener";
+        compatible = "zmk,input-listener";
         device = <&trackball_split>;
         status = "okay";
-
-        /* 常時有効：XY反転 */
-        input-processors = <
-            &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-        >;
-
-        /* Layer 5（Auto Scroll）時のみ有効：スクロール変換 */
-        layer-input-processors = <
-            5 &pointing_move_transform SCROLL
-        >;
-    };
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+     };
 };
