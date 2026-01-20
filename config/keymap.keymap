@@ -8,10 +8,20 @@
     combos {
         compatible = "zmk,combos";
 
-        bt_clear {
-            bindings = <&bt BT_CLR>;
-            key-positions = <28 29>;
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <25 26>;
             layers = <2>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <13 14>;
+        };
+
+        Layer6 {
+            bindings = <&lt 6 LEFT_SHIFT>;
+            key-positions = <48 49>;
         };
     };
 
