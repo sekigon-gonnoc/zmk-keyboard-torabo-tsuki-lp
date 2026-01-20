@@ -60,11 +60,11 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                         &trans         &trans              &trans          &trans               &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &kp LC(LG(T))                  &trans         &kp HOME            &trans          &kp END              &kp DEL        &trans
+&trans  &trans  &trans  &trans  &trans  &kp PSCRN      &trans  &trans  &kp PG_UP      &kp LA(LEFT_ARROW)  &kp UP_ARROW    &kp LA(RIGHT_ARROW)  &kp BACKSPACE  &trans
+&trans  &trans  &trans  &trans  &trans  &kp LG(LS(T))  &trans  &trans  &kp PAGE_DOWN  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans         &trans              &trans          &trans               &trans         &trans
             >;
         };
 
