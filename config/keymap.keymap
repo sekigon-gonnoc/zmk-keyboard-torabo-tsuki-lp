@@ -80,11 +80,11 @@
 
         layer_6 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans   &trans  &trans          &trans                                   &trans      &trans  &trans  &trans        &trans         &trans
+&trans  &kp F1   &kp F2   &kp F3  &kp F4          &kp F5                                   &kp N7      &kp N8  &kp N9  &kp SLASH     &kp DELETE     &trans
+&trans  &kp F6   &kp F7   &kp F8  &kp F9          &kp F10         &trans           &trans  &kp N4      &kp N5  &kp N6  &kp ASTERISK  &kp BACKSPACE  &trans
+&trans  &kp F11  &kp F12  &trans  &kp HOME        &kp UP_ARROW    &kp END          &kp N0  &kp N1      &kp N2  &kp N3  &kp MINUS     &trans         &trans
+&trans  &trans   &trans   &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &kp PERIOD  &trans  &trans  &kp PLUS      &kp EQUAL      &trans
             >;
         };
 
