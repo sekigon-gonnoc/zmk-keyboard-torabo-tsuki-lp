@@ -58,7 +58,7 @@
             >;
         };
 
-        layer_4 {
+        Win-Common_Layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                         &trans         &trans              &trans          &trans               &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &kp LC(LG(T))                  &trans         &kp HOME            &trans          &kp END              &kp DEL        &trans
@@ -78,7 +78,7 @@
             >;
         };
 
-        layer_6 {
+        Num_Layer {
             bindings = <
 &trans  &trans   &trans   &trans  &trans          &trans                                   &trans      &trans  &trans  &trans        &trans         &trans
 &trans  &kp F1   &kp F2   &kp F3  &kp F4          &kp F5                                   &kp N7      &kp N8  &kp N9  &kp SLASH     &kp DELETE     &trans
@@ -88,13 +88,13 @@
             >;
         };
 
-        layer_7 {
+        Setting_Layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans        &trans        &trans        &trans        &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &to 0   &trans  &trans        &trans        &trans        &trans        &bt BT_CLR      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &to 1   &trans  &trans        &trans        &trans        &trans        &bt BT_CLR_ALL  &trans
             >;
         };
 
