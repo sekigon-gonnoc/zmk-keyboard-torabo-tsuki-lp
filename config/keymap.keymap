@@ -1,10 +1,10 @@
 #include <input/processors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 / {
     input_processors {
@@ -35,6 +35,7 @@
             &zip_scroll_y_scaler 1 10
         >;
     };
+
     scroller3 {
         layers = <3>;
         input-processors = <
@@ -52,7 +53,7 @@
         bt_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <28 29>;
-            layers = <2>;
+            layers = <4>;
         };
     };
 
@@ -64,8 +65,28 @@
 &trans     &trans     &trans    &trans    &trans    &trans                                                         &trans       &trans  &trans     &trans    &trans                &trans
 &kp ESC    &kp Q      &kp W     &kp E     &kp R     &kp T                                                          &kp Y        &kp U   &kp I      &kp O     &kp P                 &kp BSPC
 &kp TAB    &kp A      &kp S     &kp D     &kp F     &kp G        &trans                     &trans                 &kp H        &kp J   &kp K      &kp L     &kp SEMI              &kp SQT
-&trans     &kp Z      &kp X     &kp C     &kp V     &kp B        &tog 1                     &tog 4                 &kp N        &kp M   &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &kp RSHFT
-&kp LCTRL  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &lt 2 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &mt RSHIFT LANGUAGE_2  &lt 3 ENTER  &trans  &trans     &kp RGUI  &kp RCTRL             &kp RCTRL
+&trans     &kp Z      &kp X     &kp C     &kp V     &kp B        &tog 3                     &tog 6                 &kp N        &kp M   &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &kp RSHFT
+&kp LCTRL  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &lt 4 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &mt RSHIFT LANGUAGE_2  &lt 5 ENTER  &trans  &trans     &kp RGUI  &kp RCTRL             &kp RCTRL
+            >;
+        };
+
+        L1_Yscroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        L3_Xscroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -73,7 +94,7 @@
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans  &trans  &mo 2   &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &mo 1   &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
             >;
