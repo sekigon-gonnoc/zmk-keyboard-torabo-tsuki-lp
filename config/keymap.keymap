@@ -19,12 +19,9 @@
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
         input-processors = <&zip_temp_layer 5 10000>;
     };
 };
-
-
 
 / {
     input_processors {
@@ -51,6 +48,7 @@
         &zip_temp_layer 3 750
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
     >;
+
     scroller2 {
         layers = <1>;
         input-processors = <
@@ -117,7 +115,7 @@
         L1_Mouse {
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &mkp MCLK  &trans     &trans                  &trans  &trans     &mkp MCLK  &trans  &trans  &trans
 &trans  &trans  &mo 2   &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &mo 1   &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
