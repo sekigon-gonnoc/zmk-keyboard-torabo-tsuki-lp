@@ -8,6 +8,7 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 3 250>; };
 
 &zip_temp_layer {
+    require-prior-idle-ms = <350>;
     excluded-positions = <
         15 // E?
         20 // I?
@@ -21,6 +22,7 @@
         65 // R-Ctrl? 
     >;
 };
+
 
 / {
     trackball_listener: trackball_listener {
