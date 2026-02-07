@@ -25,7 +25,6 @@
     >;
 };
 
-
 / {
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
@@ -96,9 +95,9 @@
             bindings = <
 &trans     &trans    &trans    &trans  &trans    &trans                                                         &trans       &trans  &trans     &trans   &trans                &trans
 &kp ESC    &kp Q     &kp W     &kp E   &kp R     &kp T                                                          &kp Y        &kp U   &kp I      &kp O    &kp P                 &kp DELETE
-&kp TAB    &kp A     &kp S     &kp D   &kp F     &kp G        &trans                     &trans                 &kp H        &kp J   &kp K      &kp L    &kp SEMI              &kp SQT
-&none      &kp Z     &kp X     &kp C   &kp V     &kp B        &none                      &none                  &kp N        &kp M   &kp COMMA  &kp DOT  &mt RIGHT_SHIFT FSLH  &none
-&kp LCTRL  &kp LWIN  &kp LALT  &none   &kp BSPC  &lt 4 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &mt RSHIFT LANGUAGE_2  &lt 5 ENTER  &trans  &trans     &none    &kp RIGHT_WIN         &kp RCTRL
+&kp TAB    &kp A     &kp S     &kp D   &kp F     &kp G        &trans                     &trans                 &kp H        &kp J   &kp K      &kp L    &kp MINUS             &kp RWIN
+&none      &kp Z     &kp X     &kp C   &kp V     &kp B        &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS  &kp N        &kp M   &kp COMMA  &kp DOT  &mt RIGHT_SHIFT FSLH  &none
+&kp LCTRL  &kp LWIN  &kp LALT  &none   &kp BSPC  &lt 4 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &mt RSHIFT LANGUAGE_2  &lt 5 ENTER  &trans  &trans     &none    &none                 &kp RCTRL
             >;
         };
 
@@ -134,11 +133,11 @@
 
         L4_Num {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans  &trans  &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp ASTRK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N0     &kp N4  &kp N5  &kp N6  &kp PLUS   &kp MINUS
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DOT    &kp N1  &kp N2  &kp N3  &kp SLASH  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans     &trans
+&trans  &trans          &trans          &trans     &trans  &trans                                       &trans     &trans  &trans  &trans  &trans     &trans
+&trans  &trans          &kp UP_ARROW    &trans     &trans  &trans                                       &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp ASTRK  &trans
+&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans  &trans            &trans             &kp N0     &kp N4  &kp N5  &kp N6  &kp PLUS   &kp MINUS
+&trans  &trans          &trans          &trans     &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOT    &kp N1  &kp N2  &kp N3  &kp SLASH  &trans
+&trans  &trans          &trans          &trans     &trans  &trans  &trans            &trans             &trans     &trans  &trans  &trans  &trans     &trans
             >;
         };
 
