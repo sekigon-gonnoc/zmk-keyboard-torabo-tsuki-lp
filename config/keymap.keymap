@@ -8,10 +8,16 @@
 
 &zip_temp_layer {
     excluded-positions = <
-        18 // J
-        19 // K
-        21 // ;
-        34 // Ctrl
+        15 // E?
+        20 // I?
+        26 // S?
+        27 // D?
+        28 // F?
+        33 // J?
+        34 // K?
+        35 // L?
+        52 // L-Ctrl?
+        65 // R-Ctrl? 
     >;
 };
 
@@ -45,7 +51,7 @@
 
 &trackball_listener {
     input-processors = <
-        &zip_temp_layer 3 750
+        &zip_temp_layer 3 100000
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
     >;
 
