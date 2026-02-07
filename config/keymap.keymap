@@ -28,7 +28,7 @@
 
 &trackball_listener {
     scroller2 {
-        layers = <2>;
+        layers = <1>;
         input-processors = <
             &zip_xy_to_scroll_mapper
             &zip_scroll_x_scaler 0 3
@@ -37,7 +37,7 @@
     };
 
     scroller3 {
-        layers = <3>;
+        layers = <2>;
         input-processors = <
             &zip_xy_to_scroll_mapper
             &zip_scroll_x_scaler 1 10
