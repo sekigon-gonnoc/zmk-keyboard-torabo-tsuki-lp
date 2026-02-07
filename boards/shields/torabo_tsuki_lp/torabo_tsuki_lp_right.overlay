@@ -24,16 +24,3 @@
 &size_l_transform {
     col-offset = <7>;
 };
-
-&spi0 {
-    status = "okay";
-    compatible = ...
-
-    trackball: trackball@0 {
-        status = "okay";
-        compatible = "pixart,pmw3610";
-        ...
-
-+       automouse-layer = <3>;
-    };
-};
