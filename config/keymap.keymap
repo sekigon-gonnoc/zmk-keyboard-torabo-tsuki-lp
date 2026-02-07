@@ -27,8 +27,10 @@
 };
 
 &trackball_listener {
-
-    input-processors = <&zip_temp_layer 3 2000>;
+    input-processors = <
+        &zip_temp_layer 3 750
+        &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+    >;
     scroller2 {
         layers = <1>;
         input-processors = <
