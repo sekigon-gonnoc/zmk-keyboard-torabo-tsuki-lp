@@ -27,6 +27,6 @@
         compatible = "pixart,pmw3610";
         ...
 
-+       automouse-layer = <5>;
++       automouse-layer = <3>;
     };
 };
