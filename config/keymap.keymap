@@ -28,9 +28,7 @@
 
 &trackball_listener {
 
-    &trackball_listener {
-        input-processors = <&zip_temp_layer 5 2000>;
-    };
+    input-processors = <&zip_temp_layer 5 2000>;
     scroller2 {
         layers = <1>;
         input-processors = <
