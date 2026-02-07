@@ -19,6 +19,8 @@
         34 // K?
         35 // L?
         52 // L-Ctrl?
+        58 // L-Shift?
+        59 // R-Shift? 
         65 // R-Ctrl? 
     >;
 };
