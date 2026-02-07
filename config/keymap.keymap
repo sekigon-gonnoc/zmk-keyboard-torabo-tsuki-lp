@@ -12,6 +12,12 @@
             key-positions = <28 29>;
             layers = <2>;
         };
+
+        Backspace_by_Ctrl-H {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <24 32>;
+            layers = <0>;
+        };
     };
 
     keymap {
