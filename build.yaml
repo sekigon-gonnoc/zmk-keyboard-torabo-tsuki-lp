@@ -2,29 +2,11 @@ include:
   - board: bmp_boost
     shield: torabo_tsuki_lp_left
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-    artifact-name: torabo_tsuki_lp_left_central
-  - board: bmp_boost
-    shield: torabo_tsuki_lp_right
-    snippet: studio-rpc-usb-uart
-    artifact-name: torabo_tsuki_lp_right_peripheral
-  - board: bmp_boost
-    shield: torabo_tsuki_lp_left
-    snippet: studio-rpc-usb-uart
     artifact-name: torabo_tsuki_lp_left_peripheral
   - board: bmp_boost
     shield: torabo_tsuki_lp_right
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     artifact-name: torabo_tsuki_lp_right_central
-  - board: bmp_boost
-    shield: torabo_tsuki_lp_left
-    snippet: "studio-rpc-usb-uart split-trackball"
-    artifact-name: torabo_tsuki_lp_double_ball_left_peripheral
-  - board: bmp_boost
-    shield: torabo_tsuki_lp_right
-    snippet: "studio-rpc-usb-uart split-trackball-listner"
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-    artifact-name: torabo_tsuki_lp_double_ball_right_central
   - board: bmp_boost
     shield: settings_reset
