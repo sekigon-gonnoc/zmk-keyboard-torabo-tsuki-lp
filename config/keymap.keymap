@@ -23,16 +23,16 @@
         layers = <2>;
         input-processors = <
             &zip_xy_to_scroll_mapper
-            &zip_x_scaler 0 3
-            &zip_y_scaler 2 3
+            &zip_scroll_x_scaler 0 3
+            &zip_scroll_y_scaler 2 3
         >;
     };
     scroller3 {
         layers = <3>;
         input-processors = <
             &zip_xy_to_scroll_mapper
-            &zip_x_scaler 2 3
-            &zip_y_scaler 0 3
+            &zip_scroll_x_scaler 2 3
+            &zip_scroll_y_scaler 0 3
         >;
     };
 };
