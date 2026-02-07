@@ -4,19 +4,32 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
-&trackball_listener {
-    scroller {
-        layers = <2>;
-        input-processors = <&zip_y_to_scroll_mapper>;
-        input-processors = <&zip_y_scaler 2 3>;
+/ {
+    input_processors {
+        zip_scroll_x_scaler: zip_scroll_x_scaler {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_HWHEEL>;
+            track-remainders;
+        };
     };
 };
+
 &trackball_listener {
-    scroller {
+    scroller2 {
+        layers = <2>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+        input-processors = <&zip_x_scaler 0 3>;
+        input-processors = <&zip_y_scaler 2 3>;
+    };
+    scroller3 {
         layers = <3>;
-        input-processors = <&zip_x_to_scroll_mapper>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
         input-processors = <&zip_x_scaler 2 3>;
+        input-processors = <&zip_y_scaler 0 3>;
     };
 };
 
