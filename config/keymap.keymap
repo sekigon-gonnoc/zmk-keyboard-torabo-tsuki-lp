@@ -89,20 +89,43 @@
     };
 
     macros {
-        new_macro: new_macro {
+        exit_AML: exit_AML {
             compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
             #binding-cells = <0>;
-            bindings = <&kp B &kp LS(T) &kp Y &kp P &kp E &kp SPACE &kp S &kp O &kp M &kp E &kp T &kp H &kp I &kp N &kp G &kp DOT &kp DOT &kp DOT>;
-            label = "NEW_MACRO";
+            bindings = <&tog_off MOUSE>;
+            label = "exit_AML";
+        };
+
+        kp_exit_AML: kp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
+            label = "KP_exit_AML";
         };
     };
 
     behaviors {
-        new_behavior: new_behavior {
+
+        tog_off: toggle_layer_off {
             compatible = "zmk,behavior-toggle-layer";
-            label = "NEW_BEHAVIOR";
             #binding-cells = <1>;
+            label = "Toggle Layer Off";
             toggle-mode = "off";
+        };
+
+        mt_exit_AML_on_tap: mt_exit_AML_on_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_exit_AML_ON_TAP";
+            bindings = <&kp>, <&kp_exit_AML>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
         };
     };
 
