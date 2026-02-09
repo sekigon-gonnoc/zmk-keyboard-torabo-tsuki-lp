@@ -10,14 +10,14 @@
 &zip_temp_layer {
     require-prior-idle-ms = <350>;
     excluded-positions = <
+        14 // W?
         15 // E?
         20 // I?
-        26 // S?
+        21 // O?
         27 // D?
         28 // F?
         33 // J?
         34 // K?
-        35 // L?
         52 // L-Ctrl?
         58 // L-Shift?
         59 // R-Shift? 
