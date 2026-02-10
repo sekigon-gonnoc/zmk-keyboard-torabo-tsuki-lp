@@ -14,6 +14,17 @@
         };
     };
 
+/ {
+    behaviors {
+        mm_c-h: c-h_backspace: {
+        compatible = "zmk,behavior-mod-morph";
+        label = "C-H_Backspace
+        #binding -cells = <0>;
+        bindings = <&kp H>, <&kp BACKSPACE>;
+        mods = <(MOD_LCTL)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
