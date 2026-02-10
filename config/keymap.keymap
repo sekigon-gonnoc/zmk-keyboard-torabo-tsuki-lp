@@ -15,9 +15,9 @@
     };
 
     behaviors {
-        mm_ch_bs: mm_ch_bs {
+        mm_ch_bs: ctrl_h_to_backspace {
         compatible = "zmk,behavior-mod-morph";
-        #binding -cells = <0>;
+        #binding-cells = <0>;
         bindings = <&kp H>, <&kp BACKSPACE>;
         mods = <(MOD_LCTL)>;
         };
@@ -30,7 +30,7 @@
             bindings = <
 &kp ESC       &kp N1  &kp N2    &kp N3    &kp N4           &kp N5                                   &kp N6       &kp N7  &kp N8     &kp N9            &kp N0             &kp EQUAL
 &kp TAB       &kp Q   &kp W     &kp E     &kp R            &kp T                                    &kp Y        &kp U   &kp I      &kp O             &kp P              &kp MINUS
-&kp LCTRL     &kp A   &kp S     &kp D     &kp F            &kp G        &mkp LCLK  &mkp RCLK        &kp H        &kp J   &kp K      &kp L             &lt 1 SEMICOLON    &kp SQT
+&kp LCTRL     &kp A   &kp S     &kp D     &kp F            &kp G        &mkp LCLK  &mkp RCLK        &mm_ch_bs    &kp J   &kp K      &kp L             &lt 1 SEMICOLON    &kp SQT
 &kp LSHFT     &kp Z   &kp X     &kp C     &kp V            &kp B        &kp GRAVE  &kp BACKSPACE    &kp N        &kp M   &kp COMMA  &kp DOT           &kp SLASH          &kp RSHFT
 &kp CAPSLOCK  &mo 4   &kp LGUI  &kp LALT  &lt 2 BACKSPACE  &lt 3 SPACE  &lt 1 DEL  &lt 2 LA(GRAVE)  &lt 3 ENTER  &trans  &trans     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
             >;
