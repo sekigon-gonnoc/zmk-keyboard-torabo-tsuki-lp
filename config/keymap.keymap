@@ -20,11 +20,11 @@
 
         layer_0 {
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                                                         &kp N6       &kp N7    &kp N8     &kp N9    &kp N0                &kp BSPC
-&kp TAB    &kp Q      &kp W     &kp E     &kp R     &kp T                                                          &kp Y        &kp U     &kp I      &kp O     &kp P                 &kp BSPC
-&kp CAPS   &kp A      &kp S     &kp D     &kp F     &kp G        &mkp LCLK                  &mkp RCLK              &kp H        &kp J     &kp K      &kp L     &kp SEMI              &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V     &kp B        &kp SPACE                  &kp RET                &kp N        &kp M     &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &kp RSHFT
-&kp LCTRL  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &lt 2 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &mt RSHIFT LANGUAGE_2  &lt 3 ENTER  &kp BSPC  &kp RALT   &kp RGUI  &kp RCTRL             &kp RCTRL
+&kp EQUAL    &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                                                        &kp N6       &kp N7  &kp N8     &kp N9         &kp N0     &kp MINUS
+&kp TAB      &kp Q      &kp W     &kp E     &kp R     &kp T                                                         &kp Y        &kp U   &kp I      &kp O          &kp P      &kp BACKSLASH
+&kp ESCAPE   &kp A      &kp S     &kp D     &kp F     &kp G       &mt LEFT_SHIFT LANGUAGE_1  &mt RIGHT_SHIFT LANG2  &kp H        &kp J   &kp K      &kp L          &kp SEMI   &kp SQT
+&kp LSHFT    &kp Z      &kp X     &kp C     &kp V     &kp B       &mkp LCLK                  &mkp RCLK              &kp N        &kp M   &kp COMMA  &kp DOT        &kp SLASH  &kp RSHFT
+&lt 2 SPACE  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &kp DELETE  &kp SPACE                  &kp ENTER              &lt 3 ENTER  &none   &none      &kp RIGHT_ALT  &kp RCTRL  &lt 3 ENTER
             >;
         };
 
@@ -50,11 +50,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans   &trans   &trans        &trans        &trans                      &trans            &trans     &trans         &trans     &trans      &trans
-&trans  &kp F1   &kp F2   &kp F3        &kp F4        &kp F5                      &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
-&trans  &kp F6   &kp F7   &kp F8        &kp F9        &kp F10     &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
-&trans  &kp F11  &kp F12  &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
-&trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                           &trans            &trans     &trans         &trans     &trans      &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                 &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
+&trans  &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &trans     &trans        &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
+&trans  &kp F11       &kp F12       &out OUT_USB  &out OUT_BLE  &bt BT_NXT    &trans     &trans        &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
+&trans  &trans        &trans        &trans        &kp DELETE    &kp LEFT      &kp RIGHT  &kp UP_ARROW  &kp DOWN_ARROW    &trans     &trans         &trans     &trans      &trans
             >;
         };
     };
