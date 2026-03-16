@@ -31,8 +31,8 @@
         layer_1 {
             bindings = <
 &none   &none     &none         &none      &none      &none                      &none      &none         &none          &none           &none            &none
-&trans  &trans    &kp UP_ARROW  &kp LC(X)  &kp LC(C)  &kp LC(V)                  &kp LC(X)  &kp RC(C)     &kp RC(X)      &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans
-&trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans     &trans     &none   &none   &trans     &mkp LCLK     &mkp RCLK      &msc SCRL_UP    &trans           &trans
+&trans  &trans    &kp UP_ARROW  &kp LC(X)  &kp LC(C)  &kp LC(V)                  &kp LC(X)  &kp RC(C)     &kp RC(V)      &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans
+&trans  &kp LEFT  &kp DOWN      &kp RIGHT  &mkp LCLK  &mkp RCLK  &none   &none   &trans     &mkp LCLK     &mkp RCLK      &msc SCRL_UP    &trans           &trans
 &trans  &trans    &trans        &trans     &trans     &trans     &trans  &trans  &trans     &kp RA(LEFT)  &kp RA(RIGHT)  &msc SCRL_DOWN  &trans           &trans
 &trans  &trans    &trans        &trans     &trans     &trans     &trans  &trans  &trans     &none         &none          &trans          &trans           &trans
             >;
