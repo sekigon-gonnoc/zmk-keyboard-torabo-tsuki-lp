@@ -6,14 +6,6 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
     };
 
     combos {
@@ -46,41 +38,41 @@
 
         layer_0 {
             bindings = <
-&none          &none          &none          &none          &none          &none                                                                     &none          &none          &none          &none          &none                &none
-&none          &kp Q          &kp W          &kp E          &kp R          &kp T                                                                     &kp Y          &kp U          &kp I          &kp O          &kp P                &none
-&none          &hm LGUI A     &hm LALT S     &hm LSHIFT D   &hm LCTRL F    &kp G          &none                        &none                         &kp H          &hm RCTRL J    &hm RSHIFT K   &hm RALT L     &hm RGUI SEMI        &none
-&none          &kp Z          &kp X          &kp C          &kp V          &kp B          &mo 1                        &mo 2                         &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH             &none
-&none          &kp LCTRL      &kp TAB        &kp DEL        &kp BSPC       &lt 2 SPACE    &mt LEFT_SHIFT LANGUAGE_1    &mt RSHIFT LANGUAGE_2         &lt 3 ENTER    &none          &none          &kp RGUI       &kp RCTRL            &none
+&none  &none          &none          &none          &none           &none                                          &none       &none        &none        &none        &none      &none
+&none  &kp Q          &kp W          &kp E          &kp R           &kp T                                          &kp Y       &kp U        &kp I        &kp O        &kp P      &none
+&none  &kp A          &kp S          &kp D          &kp F           &kp G        &none            &none            &kp H       &kp J        &kp K        &kp L        &kp SEMI   &none
+&none  &kp Z          &kp X          &kp C          &kp V           &kp B        &lt 3 ESC        &lt 3 TAB        &kp N       &kp M        &kp COMMA    &kp DOT      &kp FSLH   &none
+&none  &kp LCTRL      &kp LGUI       &kp LALT       &kp BSPC        &lt 1 SPACE  &lt 2 LANGUAGE_1 &lt 2 LANGUAGE_2 &lt 1 ENTER &none        &none        &kp DEL      &kp RSHIFT &none
             >;
         };
 
         layer_1 {
             bindings = <
-&trans         &trans         &trans         &trans         &trans         &trans                                                                    &trans         &trans         &trans         &trans         &trans               &trans
-&trans         &trans         &trans         &trans         &trans         &trans                                                                    &trans         &trans         &trans         &trans         &trans               &trans
-&trans         &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP   &msc SCRL_RIGHT &trans         &trans                       &trans                        &trans         &mkp LCLK      &mkp RCLK      &trans         &trans               &trans
-&trans         &trans         &trans         &trans         &trans         &trans         &trans                       &trans                        &trans         &trans         &trans         &trans         &trans               &trans
-&trans         &trans         &trans         &trans         &trans         &trans         &trans                       &trans                        &trans         &trans         &trans         &trans         &trans               &trans
+&trans &trans         &trans         &trans         &trans          &trans                                         &trans      &trans       &trans       &trans       &trans     &trans
+&trans &trans         &trans         &trans         &trans          &trans                                         &kp HOME    &kp PG_DN    &kp PG_UP    &kp END      &trans     &trans
+&trans &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP   &msc SCRL_RIGHT &trans       &trans           &trans           &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT    &trans     &trans
+&trans &trans         &trans         &trans         &trans          &trans       &trans           &trans           &mkp LCLK   &mkp RCLK    &trans       &trans       &trans     &trans
+&trans &trans         &trans         &trans         &trans          &trans       &trans           &trans           &trans      &trans       &trans       &trans       &trans     &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&trans         &trans         &trans         &trans         &trans         &trans                                                                    &trans         &trans         &trans         &trans         &trans               &trans
-&trans         &kp N7         &kp N8         &kp N9         &kp MINUS      &kp EQUAL                                                                 &kp CARET      &kp AMPS       &kp ASTRK      &kp LPAR       &kp RPAR             &trans
-&trans         &kp N4         &kp N5         &kp N6         &kp PLUS       &kp ASTRK      &trans                       &trans                        &kp HASH       &kp LBRC       &kp RBRC       &kp LBKT       &kp RBKT             &trans
-&trans         &kp N1         &kp N2         &kp N3         &kp DOT        &kp SLASH      &trans                       &trans                        &kp AT         &kp LT         &kp GT         &kp PIPE       &kp TILDE            &trans
-&trans         &trans         &kp N0         &trans         &trans         &trans         &trans                       &trans                        &trans         &trans         &trans         &trans         &trans               &none
+&trans &trans         &trans         &trans         &trans          &trans                                         &trans      &trans       &trans       &trans       &trans     &trans
+&trans &kp N7         &kp N8         &kp N9         &kp MINUS       &kp EQUAL                                      &kp CARET   &kp AMPS     &kp ASTRK    &kp LPAR     &kp RPAR   &trans
+&trans &kp N4         &kp N5         &kp N6         &kp PLUS        &kp ASTRK    &trans           &trans           &kp EXCL    &kp LBRC     &kp RBRC     &kp LBKT     &kp RBKT   &trans
+&trans &kp N1         &kp N2         &kp N3         &kp DOT         &kp SLASH    &trans           &trans           &kp AT      &kp LT       &kp GT       &kp PIPE     &kp BSLH   &trans
+&trans &trans         &kp N0         &trans         &trans          &trans       &trans           &trans           &trans      &trans       &trans       &trans       &trans     &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&trans         &trans         &trans         &trans         &trans         &trans                                                                    &trans         &trans         &trans         &trans         &trans               &trans
-&trans         &kp F1         &kp F2         &kp F3         &kp F4         &kp F5                                                                    &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        &kp ESC              &trans
-&trans         &kp F6         &kp F7         &kp F8         &kp F9         &kp F10        &trans                       &trans                        &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp INS              &trans
-&trans         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &out OUT_USB                 &out OUT_BLE                  &bt BT_CLR     &bt BT_NXT     &kp LBRC       &kp RBRC       &kp PIPE             &none
-&trans         &trans         &trans         &trans         &trans         &trans         &trans                       &trans                        &trans         &trans         &trans         &trans         &trans               &none
+&trans &trans         &trans         &trans         &trans          &trans                                         &trans      &trans       &trans       &trans       &trans     &trans
+&trans &kp F1         &kp F2         &kp F3         &kp F4          &kp F5                                         &trans      &trans       &trans       &trans       &trans     &trans
+&trans &kp F6         &kp F7         &kp F8         &kp F9          &kp F10      &trans           &trans           &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP &kp C_PP     &trans     &trans
+&trans &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4 &trans           &trans           &trans      &trans       &trans       &trans       &trans     &trans
+&trans &trans         &trans         &trans         &trans          &trans       &trans           &trans           &trans      &trans       &trans       &trans       &trans     &trans
             >;
         };
     };
