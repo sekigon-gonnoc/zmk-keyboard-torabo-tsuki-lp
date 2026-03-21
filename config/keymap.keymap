@@ -25,9 +25,9 @@
 
         // BT CLR (combo for layer 3)
 
-        bt_clear_all {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <38 39 40 41>; // Left corner
+        bt_clear {
+            bindings = <&bt BT_CLR>;
+            key-positions = <39 40 41 42>; // Left corner
             layers = <3>;
         };
     };
