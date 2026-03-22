@@ -3,6 +3,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// keymap-drawer: layout: split_3x5_2
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -24,7 +26,7 @@
         // Bluetooth Clear (combo for layer 3)
         bt_clear {
             timeout-ms = <50>;
-            key-positions = <42 43>;
+            key-positions = <41 42 43>;
             bindings = <&bt BT_CLR>;
             layers = <3>;
         };
@@ -68,7 +70,7 @@
 &trans  &trans      &trans      &trans        &trans        &trans                        &trans  &trans      &trans        &trans        &trans      &trans
 &trans  &kp F1      &kp F2      &kp F3        &kp F4        &kp F5                        &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans      &trans
 &trans  &kp F6      &kp F7      &kp F8        &kp F9        &kp F10       &trans  &trans  &trans  &kp LC(Z)   &kp LC(Y)     &kp LG(LS(S)) &kp LA(TAB) &trans
-&trans  &kp F11     &kp F12     &trans        &bt BT_PRV    &bt BT_NXT    &trans  &trans  &trans  &kp LC(A)   &kp LC(C)     &kp LC(V)     &kp LC(X)   &trans
+&trans  &kp F11     &kp F12     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans  &kp LC(A)   &kp LC(C)     &kp LC(V)     &kp LC(X)   &trans
 &trans  &trans      &trans      &trans        &trans        &trans        &trans  &trans  &trans  &trans      &trans        &trans        &trans      &trans
             >;
         };
