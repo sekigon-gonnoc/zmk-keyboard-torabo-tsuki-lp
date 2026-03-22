@@ -65,11 +65,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans      &trans      &trans        &trans        &trans                        &trans  &trans      &trans        &trans        &trans     &trans
-&trans  &kp F1      &kp F2      &kp F3        &kp F4        &kp F5                        &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans     &trans
-&trans  &kp F6      &kp F7      &kp F8        &kp F9        &kp F10       &trans  &trans  &trans  &kp LC(Z)   &kp LC(Y)     &kp LG(LS(S)) LA(TAB)    &trans
-&trans  &kp F11     &kp F12     &trans        &bt BT_PRV    &bt BT_NXT    &trans  &trans  &trans  &kp LC(A)   &kp LC(C)     &kp LC(V)     &kp LC(X)  &trans
-&trans  &trans      &trans      &trans        &trans        &trans        &trans  &trans  &trans  &trans      &trans        &trans        &trans     &trans
+&trans  &trans      &trans      &trans        &trans        &trans                        &trans  &trans      &trans        &trans        &trans      &trans
+&trans  &kp F1      &kp F2      &kp F3        &kp F4        &kp F5                        &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans      &trans
+&trans  &kp F6      &kp F7      &kp F8        &kp F9        &kp F10       &trans  &trans  &trans  &kp LC(Z)   &kp LC(Y)     &kp LG(LS(S)) &kp LA(TAB) &trans
+&trans  &kp F11     &kp F12     &trans        &bt BT_PRV    &bt BT_NXT    &trans  &trans  &trans  &kp LC(A)   &kp LC(C)     &kp LC(V)     &kp LC(X)   &trans
+&trans  &trans      &trans      &trans        &trans        &trans        &trans  &trans  &trans  &trans      &trans        &trans        &trans      &trans
             >;
         };
     };
