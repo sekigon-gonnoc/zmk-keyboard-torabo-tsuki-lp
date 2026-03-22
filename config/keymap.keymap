@@ -49,7 +49,7 @@
 &trans  &trans          &trans          &trans        &trans           &trans                  &trans  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
 &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans  &trans  &trans  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans
 &trans  &trans          &trans          &trans        &trans           &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans     &trans     &trans
-&trans  &trans          &trans          &trans        &trans           &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans     &trans
+&trans  &trans          &trans          &trans        &kp DEL          &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans     &trans
             >;
         };
 
