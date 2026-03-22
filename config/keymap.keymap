@@ -39,7 +39,7 @@
 &none  &kp Q      &kp W     &kp E     &kp R     &kp T                                            &kp Y        &kp U  &kp I      &kp O    &kp P       &none
 &none  &kp A      &kp S     &kp D     &kp F     &kp G        &none             &none             &kp H        &kp J  &kp K      &kp L    &kp SEMI    &none
 &none  &kp Z      &kp X     &kp C     &kp V     &kp B        &lt 3 ESC         &lt 3 TAB         &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH    &none
-&none  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &lt 1 SPACE  &lt 2 LANGUAGE_1  &lt 2 LANGUAGE_2  &lt 1 ENTER  &none  &none      &kp DEL  &kp RSHIFT  &none
+&none  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &lt 2 SPACE  &lt 1 LANGUAGE_1  &lt 1 LANGUAGE_2  &lt 2 ENTER  &none  &none      &kp DEL  &kp RSHIFT  &none
             >;
         };
 
@@ -53,7 +53,7 @@
             >;
         };
 
-        layer_2 {
+        layer_2_OLD {
             bindings = <
 &trans  &trans  &trans  &trans  &trans     &trans                     &trans     &trans    &trans     &trans    &trans    &trans
 &trans  &kp N7  &kp N8  &kp N9  &kp MINUS  &kp EQUAL                  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &trans
@@ -63,12 +63,24 @@
             >;
         };
 
+        layer_2 {
+            bindings = <
+&trans  &trans    &trans    &trans    &trans    &trans                     &trans    &trans    &trans    &trans    &trans  &trans
+&trans  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0  &trans
+&trans  &kp DQT   &kp SQT   &kp LPAR  &kp LBRC  &kp LBKT   &trans  &trans  &kp RBKT  &kp RBRC  &kp RPAR  &kp COLON &trans  &trans
+&trans  &kp UNDER &kp EQUAL &kp PLUS  &kp MINUS &kp SLASH  &trans  &trans  &kp ASTRK &kp DOT   &kp COMMA &kp GT    &kp LT  &trans
+&trans  &trans    &trans    &trans    &trans    &trans     &trans  &trans  &trans    &trans    &trans    &trans    &trans  &trans
+            >;
+        };
+
+
+
         layer_3 {
             bindings = <
 &trans  &trans        &trans        &trans        &trans        &trans                        &trans      &trans        &trans        &trans    &trans   &trans
-&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                        &kp F6      &kp F7        &kp F8        &kp F9    &kp F10  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP  &trans   &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans      &trans        &trans        &trans    &trans   &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                        &trans      &trans        &trans        &trans    &trans   &trans
+&trans  &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &trans  &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP  &trans   &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans      &trans        &trans        &trans    &trans   &trans
 &trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans      &trans        &trans        &trans    &trans   &trans
             >;
         };
