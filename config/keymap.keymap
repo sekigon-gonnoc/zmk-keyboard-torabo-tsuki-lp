@@ -87,11 +87,11 @@
 
         symbol {
             bindings = <
-&trans  &trans           &trans             &trans                &trans             &trans                                 &trans             &trans            &trans                &trans         &trans            &trans
-&trans  &kp N1           &kp N2             &kp N3                &kp N4             &kp N5                                 &kp N6             &kp N7            &kp N8                &kp N9         &kp N0            &trans
-&trans  &kp LS(N7)       &kp SINGLE_QUOTE   &kp LS(N8)            &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &trans  &trans  &kp LS(BACKSLASH)  &kp BACKSLASH     &kp LS(N9)            &kp SEMICOLON  &kp LS(NUMBER_2)  &trans
-&trans  &kp LS(MINUS)    &kp LS(SEMICOLON)  &kp MINUS             &kp DOUBLE_QUOTES  &kp SLASH              &trans  &trans  &kp EQUAL          &kp LEFT_BRACKET  &kp LS(LEFT_BRACKET)  &kp JP_UNDERSCORE       &kp INT_YEN       &trans
-&trans  &trans           &trans             &trans                &kp DEL            &trans                 &trans  &trans  &trans             &trans            &trans                &trans         &trans            &trans
+&trans  &trans       &trans       &trans       &trans       &trans                       &trans       &trans       &trans       &trans       &trans       &trans
+&trans  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &trans
+&trans  &kp JP_DQT   &kp JP_SEMI  &kp JP_LPAR  &kp JP_LBKT  &kp JP_LBRC  &trans  &trans  &kp JP_RBRC  &kp JP_RBKT  &kp JP_RPAR  &kp JP_GRAVE &kp JP_SQT   &trans
+&trans  &kp JP_EXCL  &kp JP_HASH  &kp JP_PRCNT &kp JP_AMPS  &kp JP_DLLR  &trans  &trans  &kp JP_COLON &kp JP_AT    &kp JP_PIPE  &kp JP_UNDER &kp JP_BSLH  &trans
+&trans  &kp JP_PLUS  &kp JP_ASTRK &kp JP_TILDE &kp DEL      &trans       &trans  &trans  &trans       &trans       &trans       &kp JP_CARET &trans       &trans
             >;
         };
 
