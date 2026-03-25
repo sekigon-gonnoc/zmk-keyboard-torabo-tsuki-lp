@@ -1,3 +1,5 @@
+#define JP_UNDERSCORE LS(0x87)  // _
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -50,7 +52,7 @@
 &trans  &trans           &trans             &trans                &trans             &trans                                 &trans             &trans            &trans                &trans         &trans            &trans
 &trans  &kp N1           &kp N2             &kp N3                &kp N4             &kp N5                                 &kp N6             &kp N7            &kp N8                &kp N9         &kp N0            &trans
 &trans  &kp LS(N7)       &kp SINGLE_QUOTE   &kp LS(N8)            &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &trans  &trans  &kp LS(BACKSLASH)  &kp BACKSLASH     &kp LS(N9)            &kp SEMICOLON  &kp LS(NUMBER_2)  &trans
-&trans  &kp LS(MINUS)    &kp LS(SEMICOLON)  &kp MINUS             &kp DOUBLE_QUOTES  &kp SLASH              &trans  &trans  &kp EQUAL          &kp LEFT_BRACKET  &kp LS(LEFT_BRACKET)  &kp 0x5F       &kp INT_YEN       &trans
+&trans  &kp LS(MINUS)    &kp LS(SEMICOLON)  &kp MINUS             &kp DOUBLE_QUOTES  &kp SLASH              &trans  &trans  &kp EQUAL          &kp LEFT_BRACKET  &kp LS(LEFT_BRACKET)  &kp JP_UNDERSCORE       &kp INT_YEN       &trans
 &trans  &trans           &trans             &trans                &kp DEL            &trans                 &trans  &trans  &trans             &trans            &trans                &trans         &trans            &trans
             >;
         };
