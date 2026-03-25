@@ -1,16 +1,15 @@
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100    // default: 10
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-
-// keymap-drawer: layout: split_3x5_2
 
 / {
     combos {
         compatible = "zmk,combos";
 
         // J + K = ESC
-
         combo_esc {
             timeout-ms = <50>;
             key-positions = <33 34>;
@@ -18,7 +17,6 @@
         };
 
         // D + F = TAB
-
         combo_tab {
             timeout-ms = <50>;
             key-positions = <27 28>;
@@ -26,7 +24,6 @@
         };
 
         // Bluetooth Clear (combo for layer 3)
-
         bt_clear {
             timeout-ms = <50>;
             key-positions = <41 42 43>;
@@ -51,7 +48,7 @@
         layer_1 {
             bindings = <
 &trans  &trans          &trans                &trans              &trans           &trans                  &trans  &trans     &trans     &trans     &trans     &trans
-&trans  &trans          &msc MOVE_X(10)       &msc MOVE_Y(10)     &trans           &trans                  &trans  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
+&trans  &trans          &trans                &trans              &trans           &trans                  &trans  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
 &trans  &msc SCRL_LEFT  &msc SCRL_DOWN        &msc SCRL_UP        &msc SCRL_RIGHT  &trans  &trans  &trans  &trans  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans
 &trans  &trans          &kp LC(LA(LS(DOWN)))  &kp LC(LA(LS(UP)))  &trans           &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans     &trans     &trans
 &trans  &trans          &trans                &trans              &kp DEL          &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans     &trans
