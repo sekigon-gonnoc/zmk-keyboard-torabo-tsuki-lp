@@ -4,7 +4,7 @@
 
 / {
     chosen {
-        zmk,physical-layout = &physical_layout_l;
+        zmk,physical-layout = &physical_layout_s;
         zmk,kscan = &kscan0;
         zmk,battery = &non_lipo_battery;
     };
