@@ -58,11 +58,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans           &trans             &trans      &trans             &trans                                 &trans             &trans                 &trans                &trans                 &trans            &trans
-&trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH    &kp DOLLAR         &kp PERCENT                            &kp AMPERSAND      &kp APOSTROPHE         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE          &trans
-&trans  &kp LS(N7)       &kp SINGLE_QUOTE   &kp LS(N8)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &trans  &trans  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &kp LS(N9)            &kp SEMICOLON          &kp LS(NUMBER_2)  &trans
-&trans  &kp LS(MINUS)    &kp LS(SEMICOLON)  &kp MINUS   &kp CARET          &kp SLASH              &trans  &trans  &kp EQUAL          &kp LEFT_BRACKET       &kp LS(LEFT_BRACKET)  &kp BACKSLASH          &kp ASTERISK      &trans
-&trans  &trans           &trans             &trans      &kp DEL            &trans                 &trans  &trans  &trans             &trans                 &trans                &trans                 &trans            &trans
+&trans  &trans           &trans             &trans      &trans             &trans                                 &trans             &trans            &trans                &trans                 &trans            &trans
+&trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH    &kp DOLLAR         &kp PERCENT                            &kp AMPERSAND      &kp APOSTROPHE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE          &trans
+&trans  &kp LS(N7)       &kp SINGLE_QUOTE   &kp LS(N8)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &trans  &trans  &kp LS(BACKSLASH)  &kp BACKSLASH     &kp LS(N9)            &kp SEMICOLON          &kp LS(NUMBER_2)  &trans
+&trans  &kp LS(MINUS)    &kp LS(SEMICOLON)  &kp MINUS   &kp CARET          &kp DOUBLE_QUOTES      &trans  &trans  &kp EQUAL          &kp LEFT_BRACKET  &kp LS(LEFT_BRACKET)  &kp BACKSLASH          &kp ASTERISK      &trans
+&trans  &trans           &trans             &trans      &kp DEL            &trans                 &trans  &trans  &trans             &trans            &trans                &trans                 &trans            &trans
             >;
         };
 
