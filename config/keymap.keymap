@@ -78,7 +78,7 @@
         base {
             bindings = <
 &kp Q             &kp W         &kp E     &kp R     &kp T                                            &kp Y        &kp U  &kp I      &kp O    &kp P          
-&kp A             &kp S         &kp D     &kp F     &kp G        &none             &none             &kp H        &kp J  &kp K      &kp L    &kp MINUS      
+&kp A             &kp S         &kp D     &kp F     &kp G                                            &kp H        &kp J  &kp K      &kp L    &kp MINUS      
 &mt LEFT_SHIFT Z  &kp X         &kp C     &kp V     &kp B        &lt 3 ESC         &lt 3 TAB         &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH      
 &kp LCTRL         &kp LEFT_WIN  &kp LALT  &kp BSPC  &lt 1 SPACE  &lt 2 LANGUAGE_1  &lt 2 LANGUAGE_2  &lt 1 ENTER  &none  &none      &kp DEL  &kp RIGHT_SHIFT
             >;
@@ -87,7 +87,7 @@
         symbol {
             bindings = <
 &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0     
-&kp JP_DQT   &kp JP_SEMI  &kp JP_LPAR  &kp JP_LBKT  &kp JP_LBRC  &trans  &trans  &kp JP_RBRC  &kp JP_RBKT  &kp JP_RPAR  &kp JP_GRAVE &kp JP_SQT 
+&kp JP_DQT   &kp JP_SEMI  &kp JP_LPAR  &kp JP_LBKT  &kp JP_LBRC                  &kp JP_RBRC  &kp JP_RBKT  &kp JP_RPAR  &kp JP_GRAVE &kp JP_SQT 
 &kp JP_EXCL  &kp JP_HASH  &kp JP_PRCNT &kp JP_AMPS  &kp JP_DLLR  &trans  &trans  &kp JP_COLON &kp JP_AT    &kp JP_PIPE  &kp JP_UNDER &kp JP_BSLH
 &kp JP_PLUS  &kp JP_ASTRK &kp JP_TILDE &kp DEL      &trans       &trans  &trans  &trans       &trans       &trans       &kp JP_CARET &trans     
             >;
@@ -96,7 +96,7 @@
         mouse {
             bindings = <
 &trans             &trans                &mkp MCLK           &trans            &trans                  &trans  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END  
-&msc MOVE_X(-300)  &msc MOVE_Y(-300)     &msc MOVE_Y(300)    &msc MOVE_X(300)  &trans  &trans  &trans  &trans  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+&msc MOVE_X(-300)  &msc MOVE_Y(-300)     &msc MOVE_Y(300)    &msc MOVE_X(300)  &trans                  &trans  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
 &trans             &kp LC(LA(LS(DOWN)))  &kp LC(LA(LS(UP)))  &trans            &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &mkp MB4   &mkp MB5 
 &trans             &trans                &trans              &trans            &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans   
             >;
@@ -105,7 +105,7 @@
         function {
             bindings = <
 &kp F1   &kp F2   &kp F3        &kp F4        &kp F5                        &trans  &kp C_MUTE    &kp C_VOL_DN   &kp C_VOL_UP   &trans
-&kp F6   &kp F7   &kp F8        &kp F9        &kp F10       &trans  &trans  &trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(LS(S))  &trans
+&kp F6   &kp F7   &kp F8        &kp F9        &kp F10                       &trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(LS(S))  &trans
 &kp F11  &kp F12  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans  &trans        &trans         &trans         &trans
 &trans   &trans   &trans        &trans        &trans        &trans  &trans  &trans  &trans        &trans         &trans         &trans
             >;
