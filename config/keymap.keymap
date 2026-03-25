@@ -56,16 +56,6 @@
             >;
         };
 
-        layer_2 {
-            bindings = <
-&trans  &trans            &trans     &trans                &trans          &trans                            &trans             &trans           &trans                 &trans         &trans             &trans
-&trans  &kp N1            &kp N2     &kp N3                &kp N4          &kp N5                            &kp N6             &kp N7           &kp N8                 &kp N9         &kp N0             &trans
-&trans  &kp SINGLE_QUOTE  &kp COLON  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &kp LEFT_BRACKET  &trans  &trans  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &trans
-&trans  &kp EQUAL         &kp PLUS   &kp MINUS             &kp ASTERISK    &kp SLASH         &trans  &trans  &kp PERCENT        &kp AT_SIGN      &kp UNDERSCORE         &kp CARET      &kp BACKSLASH      &trans
-&trans  &trans            &trans     &trans                &kp DEL         &trans            &trans  &trans  &trans             &trans           &trans                 &trans         &trans             &trans
-            >;
-        };
-
 
 layer_2 {
     bindings = <
