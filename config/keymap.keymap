@@ -58,11 +58,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans         &trans             &trans      &trans             &trans                                &trans             &trans                 &trans         &trans         &trans                &trans
-&trans  &kp N1         &kp N2             &kp N3      &kp N4             &kp N5                                &kp N6             &kp N7                 &kp N8         &kp N9         &kp N0                &trans
-&trans  &kp LS(N7)     &kp LS(COLON)      &kp LS(N8)  &kp RIGHT_BRACKET  &kp LS(LEFT_BRACKET)  &trans  &trans  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &kp LS(N9)     &kp SEMICOLON  &kp LS(NUMBER_2)      &trans
-&trans  &kp LS(MINUS)  &kp LS(SEMICOLON)  &kp MINUS   &kp LS(N8)         &kp SLASH             &trans  &trans  &kp EQUAL          &kp LEFT_BRACKET       &kp LS(MINUS)  &kp LS(N6)     &kp NON_US_BACKSLASH  &trans
-&trans  &trans         &trans             &trans      &kp DEL            &trans                &trans  &trans  &trans             &trans                 &trans         &trans         &trans                &trans
+&trans  &trans           &trans             &trans      &trans             &trans                                 &trans             &trans                 &trans                &trans                 &trans            &trans
+&trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH    &kp DOLLAR         &kp PERCENT                            &kp AMPERSAND      &kp APOSTROPHE         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE          &trans
+&trans  &kp LS(N7)       &kp SINGLE_QUOTE   &kp LS(N8)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &trans  &trans  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &kp LS(N9)            &kp SEMICOLON          &kp LS(NUMBER_2)  &trans
+&trans  &kp LS(MINUS)    &kp LS(SEMICOLON)  &kp MINUS   &kp CARET          &kp SLASH              &trans  &trans  &kp EQUAL          &kp LEFT_BRACKET       &kp LS(LEFT_BRACKET)  &kp BACKSLASH          &kp ASTERISK      &trans
+&trans  &trans           &trans             &trans      &kp DEL            &trans                 &trans  &trans  &trans             &trans                 &trans                &trans                 &trans            &trans
             >;
         };
 
