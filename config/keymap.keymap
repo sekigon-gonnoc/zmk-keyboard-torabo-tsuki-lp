@@ -98,9 +98,9 @@
         symbol {
             bindings = <
 &kp N1       &kp N2        &kp N3        &kp N4       &kp N5                       &kp N6        &kp N7       &kp N8       &kp N9        &kp N0
-&kp JP_DQT   &kp JP_SEMI   &kp JP_LPAR   &kp JP_LBKT  &kp JP_LBRC                  &kp JP_RBRC   &kp JP_RBKT  &kp JP_RPAR  &kp JP_GRAVE  &kp JP_SQT
-&kp JP_EXCL  &kp JP_HASH   &kp JP_PRCNT  &kp JP_AMPS  &kp JP_DLLR  &trans  &trans  &kp JP_COLON  &kp JP_AT    &kp JP_PIPE  &kp JP_UNDER  &kp JP_BSLH
-&kp JP_PLUS  &kp JP_ASTRK  &kp JP_TILDE  &kp DEL      &trans       &trans  &trans  &trans        &trans       &trans       &kp JP_CARET  &trans
+&kp JP_DQT   &kp JP_AT     &kp JP_LPAR   &kp JP_LBKT  &kp JP_LBRC                  &kp JP_RBRC   &kp JP_RBKT  &kp JP_RPAR  &kp JP_GRAVE  &kp JP_SQT
+&kp JP_EXCL  &kp JP_HASH   &kp JP_PRCNT  &kp JP_AMPS  &kp JP_DLLR  &trans  &trans  &kp JP_PLUS   &kp JP_UNDER &kp JP_SEMI  &kp JP_COLON  &kp JP_YEN
+&trans       &trans        &trans        &kp DEL      &trans       &trans  &trans  &trans        &trans       &trans       &kp JP_CARET  &trans
             >;
         };
 
