@@ -47,20 +47,32 @@
     combos {
         compatible = "zmk,combos";
 
-        // J + K = ESC
-
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp ESC>;
-        };
-
-        // D + F = TAB
-
+        // A + S = DOWN SCROLL
         combo_tab {
             timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&msc MOVE_Y(-300)>;
+        };
+
+        // D + F = UP SCROLL
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&msc MOVE_Y(300)>;
+        };
+
+        // J + K = L Click
+        combo_esc {
+            timeout-ms = <50>;
             key-positions = <16 17>;
-            bindings = <&kp TAB>;
+            bindings = <&mkp LCLK>;
+        };
+
+        // L + - = R Click
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&mkp RCLK>;
         };
 
         // Bluetooth Clear (combo for layer 3)
@@ -104,10 +116,10 @@
 
         function {
             bindings = <
-&kp F1   &kp F2   &kp F3        &kp F4        &kp F5                        &trans  &kp C_MUTE    &kp C_VOL_DN   &kp C_VOL_UP   &trans
+&kp F1   &kp F2   &kp F3        &kp F4        &kp F5                        &trans  &kp C_MUTE        &kp C_VOL_DN       &kp C_VOL_UP   &trans
 &kp F6   &kp F7   &kp F8        &kp F9        &kp F10                       &trans  &kp LG(LS(LEFT))  &kp LG(LS(RIGHT))  &kp LG(LS(S))  &trans
-&kp F11  &kp F12  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans  &trans        &trans         &trans         &trans
-&trans   &trans   &trans        &trans        &trans        &trans  &trans  &trans  &trans        &trans         &trans         &trans
+&kp F11  &kp F12  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans  &kp LG(LEFT)      &kp LG(RIGHT)      &trans         &trans
+&trans   &trans   &trans        &trans        &trans        &trans  &trans  &trans  &trans            &trans             &trans         &trans
             >;
         };
     };
