@@ -48,35 +48,34 @@
         compatible = "zmk,combos";
 
         // A + S = DOWN SCROLL
-        combo_tab {
+        combo_down_scroll {
             timeout-ms = <50>;
             key-positions = <10 11>;
             bindings = <&msc MOVE_Y(-300)>;
         };
 
         // D + F = UP SCROLL
-        combo_tab {
+        combo_up_scroll {
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&msc MOVE_Y(300)>;
         };
 
         // J + K = L Click
-        combo_esc {
+        combo_lclick {
             timeout-ms = <50>;
             key-positions = <16 17>;
             bindings = <&mkp LCLK>;
         };
 
         // L + - = R Click
-        combo_esc {
+        combo_rclick {
             timeout-ms = <50>;
             key-positions = <18 19>;
             bindings = <&mkp RCLK>;
         };
 
         // Bluetooth Clear (combo for layer 3)
-
         bt_clear {
             timeout-ms = <50>;
             key-positions = <24 23 22>;
