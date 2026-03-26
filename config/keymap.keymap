@@ -48,28 +48,28 @@
         compatible = "zmk,combos";
 
         // A + S = DOWN SCROLL
-        combo_down_scroll {
+        down_scroll {
             timeout-ms = <50>;
             key-positions = <10 11>;
             bindings = <&msc MOVE_Y(-300)>;
         };
 
         // D + F = UP SCROLL
-        combo_up_scroll {
+        up_scroll {
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&msc MOVE_Y(300)>;
         };
 
         // J + K = L Click
-        combo_lclick {
+        l_click {
             timeout-ms = <50>;
             key-positions = <16 17>;
             bindings = <&mkp LCLK>;
         };
 
         // L + - = R Click
-        combo_rclick {
+        r_click {
             timeout-ms = <50>;
             key-positions = <18 19>;
             bindings = <&mkp RCLK>;
