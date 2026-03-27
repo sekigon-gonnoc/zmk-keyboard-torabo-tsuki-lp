@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -50,11 +49,11 @@
 
         layer_3_function {
             bindings = <
-&trans  &trans   &trans   &trans        &trans        &trans                      &trans            &trans     &trans         &trans     &trans      &trans
-&trans  &kp F1   &kp F2   &kp F3        &kp F4        &kp F5                      &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
-&trans  &kp F6   &kp F7   &kp F8        &kp F9        &kp F10     &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
-&trans  &kp F11  &kp F12  &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
-&trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
+&trans  &trans   &trans   &trans  &trans      &trans                   &trans    &trans         &trans          &trans          &trans           &trans
+&trans  &kp F1   &kp F2   &kp F3  &kp F4      &kp F5                   &kp F6    &kp F7         &kp F8          &kp F9          &kp F10          &trans
+&trans  &kp F6   &kp F7   &kp F8  &kp F9      &kp F10  &trans  &trans  &kp HOME  &kp PG_UP      &trans          &kp UP_ARROW    &trans           &trans
+&trans  &kp F11  &kp F12  &trans  &trans      &trans   &trans  &trans  &kp END   &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans   &trans   &trans  &kp DELETE  &kp TAB  &trans  &trans  &trans    &trans         &trans          &trans          &trans           &trans
             >;
         };
 
