@@ -11,7 +11,7 @@
         bt_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <28 29>;
-            layers = <2>;
+            layers = <4>;
         };
     };
 
@@ -20,19 +20,19 @@
 
         layer_0 {
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                                                         &kp N6       &kp N7    &kp N8     &kp N9    &kp N0                &kp BSPC
-&kp TAB    &kp Q      &kp W     &kp E     &kp R     &kp T                                                          &kp Y        &kp U     &kp I      &kp O     &kp P                 &kp BSPC
-&kp CAPS   &kp A      &kp S     &kp D     &kp F     &kp G        &mkp LCLK                  &mkp RCLK              &kp H        &kp J     &kp K      &kp L     &kp SEMI              &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V     &kp B        &kp SPACE                  &kp RET                &kp N        &kp M     &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &kp RSHFT
-&kp LCTRL  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &lt 2 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &mt RSHIFT LANGUAGE_2  &lt 3 ENTER  &kp BSPC  &kp RALT   &kp RGUI  &kp RCTRL             &kp RCTRL
+&kp LEFT_WIN    &kp Q         &kp W  &kp E  &kp R  &kp T                        &kp Y  &kp U  &kp I      &kp O       &kp P                      &kp BSPC
+&kp ESCAPE      &kp A         &kp S  &kp D  &kp F  &kp G                        &kp H  &kp J  &kp K      &kp L       &mt RIGHT_SHIFT SEMICOLON  &lt 4 COLON
+&kp LEFT_SHIFT  &kp Z         &kp X  &kp C  &kp V  &kp B  &mkp LCLK  &mkp RCLK  &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH                  &kp TAB
+&kp LCTRL       &kp LEFT_ALT  &none  &none  &none  &sl 4  &kp SPACE  &kp RET    &sl 4  &none  &none      &none       &none                      &kp RSHFT
+&none           &none         &none  &none  &none  &none  &none      &none      &none  &none  &none      &none       &none                      &none
             >;
         };
 
         layer_1 {
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans                  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
             >;
@@ -40,21 +40,31 @@
 
         layer_2 {
             bindings = <
-&trans  &trans            &trans            &trans      &trans      &trans                      &trans          &trans         &trans            &trans             &trans         &trans
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                  &kp LS(N6)      &kp LS(N7)     &kp LS(N8)        &kp LS(N9)         &kp LS(N0)     &trans
-&trans  &kp N1            &kp N2            &kp N3      &kp N4      &kp N5      &trans  &trans  &kp LEFT_BRACE  &kp MINUS      &kp EQUAL         &kp RIGHT_BRACE    &kp COLON      &trans
-&trans  &kp N6            &kp N7            &kp N8      &kp N9      &kp N0      &trans  &trans  &kp LS(MINUS)   &kp LS(EQUAL)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
-&trans  &trans            &trans            &trans      &trans      &trans      &trans  &trans  &kp TAB         &kp DEL        &trans            &trans             &trans         &trans
+&trans  &kp LS(EXCL)  &kp LS(DQT)  &kp SQT   &kp DOLLAR  &kp PERCENT                   &kp LS(AMPS)    &kp SQT    &kp LS(LPAR)    &kp LS(RPAR)     &kp GRAVE      &trans
+&trans  &kp AT_SIGN   &kp BSLH     &kp PIPE  &kp PLUS    &kp ASTERISK                  &kp MINUS       &kp EQUAL  &kp LBKT        &kp RBKT         &kp LS(TILDE)  &trans
+&trans  &trans        &trans       &trans    &trans      &trans        &trans  &trans  &kp UNDERSCORE  &kp CARET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp QUESTION   &trans
+&trans  &trans        &trans       &trans    &trans      &trans        &trans  &trans  &trans          &trans     &trans          &trans           &trans         &trans
+&trans  &trans        &trans       &trans    &trans      &trans        &trans  &trans  &trans          &trans     &trans          &trans           &trans         &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans   &trans   &trans        &trans        &trans                      &trans            &trans     &trans         &trans     &trans      &trans
-&trans  &kp F1   &kp F2   &kp F3        &kp F4        &kp F5                      &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
-&trans  &kp F6   &kp F7   &kp F8        &kp F9        &kp F10     &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
-&trans  &kp F11  &kp F12  &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
-&trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
+&trans  &trans        &trans         &trans         &trans         &trans                              &trans          &trans             &trans           &trans     &trans         &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2   &kp N3         &kp NUMBER_4   &kp N5                              &kp N6          &kp N7             &kp N8           &kp N9     &kp N0         &trans
+&trans  &trans        &kp LG(SPACE)  &kp LA(SPACE)  &kp LC(SPACE)  &kp LC(INSERT)  &trans     &trans   &kp LEFT_ARROW  &kp DOWN           &kp UP_ARROW     &kp RIGHT  &kp PAGE_UP    &trans
+&trans  &trans        &trans         &trans         &trans         &kp LS(INSERT)  &kp SPACE  &kp RET  &kp INS         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp DEL    &kp PAGE_DOWN  &trans
+&trans  &trans        &trans         &trans         &trans         &trans          &trans     &trans   &trans          &trans             &trans           &trans     &trans         &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &kp F1  &kp F2  &kp F3        &kp F4        &kp F5                      &kp F6   &kp F7   &kp F8        &kp F9  &kp F10  &trans
+&trans  &trans  &trans  &trans        &trans        &trans                      &kp F11  &kp F12  &kp CAPSLOCK  &trans  &trans   &trans
+&trans  &trans  &trans  &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &trans   &trans   &trans        &trans  &trans   &trans
+&trans  &trans  &trans  &trans        &trans        &trans      &trans  &trans  &trans   &trans   &trans        &trans  &trans   &trans
+&trans  &trans  &trans  &trans        &trans        &trans      &trans  &trans  &trans   &trans   &trans        &trans  &trans   &trans
             >;
         };
     };
