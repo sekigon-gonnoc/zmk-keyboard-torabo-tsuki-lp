@@ -18,5 +18,11 @@
         status = "okay";
         input-processors = <&zip_temp_layer 1 400>,
                            <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
-     };
+
+        scroll {
+            layers = <1>;
+            input-processors = <&zip_xy_scaler 1 16>,
+                               <&zip_xy_to_scroll_mapper>;
+        };
+    };
 };

@@ -50,7 +50,7 @@
             bindings = <
 &kp LEFT_WIN    &kp Q         &kp W  &kp E  &kp R  &kp T                            &kp Y  &kp U  &kp I      &kp O       &kp P                             &kp BSPC
 &kp ESCAPE      &kp A         &kp S  &kp D  &kp F  &kp G                            &kp H  &kp J  &kp K      &kp L       &LEFT_HRMs RIGHT_SHIFT SEMICOLON  &LAYER_HRM 4 COLON
-&kp LEFT_SHIFT  &kp Z         &kp X  &kp C  &kp V  &kp B  &kp BACKSPACE  &mkp RCLK  &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH                         &kp TAB
+&kp LEFT_SHIFT  &kp Z         &kp X  &kp C  &kp V  &kp B  &kp BACKSPACE  &mkp RCLK  &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH                       &lt 1 TAB
 &kp LCTRL       &kp LEFT_ALT  &none  &none  &none  &sl 3  &kp SPACE      &kp RET    &sl 2  &none  &none      &none       &none                             &kp RSHFT
 &none           &none         &none  &none  &none  &none  &none          &none      &none  &none  &none      &none       &none                             &none
             >;
