@@ -1,0 +1,4 @@
+&pointing_listener {
+    status = "okay";
+    device = <&pointing_device>;
+};

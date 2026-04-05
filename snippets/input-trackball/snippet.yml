@@ -1,0 +1,4 @@
+name: input-trackball
+append:
+  EXTRA_DTC_OVERLAY_FILE: input-trackball.overlay
+  EXTRA_CONF_FILE: input-trackball.conf

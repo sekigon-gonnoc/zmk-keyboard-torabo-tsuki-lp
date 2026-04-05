@@ -15,8 +15,5 @@ config INPUT
 
 config ZMK_MOUSE
     default y
-
-config PAW3222
-    default y
  
 endif
