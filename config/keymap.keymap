@@ -10,7 +10,19 @@
 
         changeLang {
             bindings = <&kp GLOBE>;
-            key-positions = <12 46>;
+            key-positions = <24 60>;
+        };
+
+        quote {
+            bindings = <&kp SQT>;
+            key-positions = <36 37>;
+            layers = <0>;
+        };
+
+        backSlash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <23 22>;
+            layers = <0>;
         };
     };
 
@@ -19,11 +31,11 @@
 
         base_layer {
             bindings = <
-&trans  &trans      &trans     &trans    &trans            &trans                          &trans     &trans     &trans     &trans   &trans    &trans
-&trans  &kp Q       &kp W      &kp E     &kp R             &kp T                           &kp Y      &kp U      &kp I      &kp O    &kp P     &trans
-&trans  &kp A       &kp S      &kp D     &kp F             &kp G      &mkp LCLK    &trans  &kp H      &kp J      &kp K      &kp L    &kp SEMI  &trans
-&trans  &kp Z       &kp X      &kp C     &kp V             &kp B      &lt 3 SPACE  &trans  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-&trans  &kp ESCAPE  &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &lt 1 TAB  &kp BSPC     &trans  &lt 2 RET  &kp SPACE  &trans     &trans   &trans    &kp GLOBE
+&trans  &trans      &trans     &trans    &trans            &trans                       &trans     &trans     &trans     &trans   &trans    &trans
+&trans  &kp Q       &kp W      &kp E     &kp R             &kp T                        &kp Y      &kp U      &kp I      &kp O    &kp P     &trans
+&trans  &kp A       &kp S      &kp D     &kp F             &kp G      &none     &trans  &kp H      &kp J      &kp K      &kp L    &kp SEMI  &trans
+&trans  &kp Z       &kp X      &kp C     &kp V             &kp B      &none     &trans  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&trans  &kp ESCAPE  &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &lt 1 TAB  &kp BSPC  &trans  &lt 2 RET  &kp SPACE  &trans     &trans   &trans    &kp GLOBE
             >;
         };
 
