@@ -30,11 +30,11 @@
 
         base_layer {
             bindings = <
-&trans  &trans              &trans     &trans    &trans            &trans                                          &trans     &trans  &trans     &trans   &trans                 &trans
-&trans  &kp Q               &kp W      &kp E     &kp R             &kp T                                           &kp Y      &kp U   &kp I      &kp O    &kp P                  &trans
-&trans  &mt LEFT_COMMAND A  &kp S      &kp D     &kp F             &kp G      &none             &trans             &kp H      &kp J   &kp K      &kp L    &kp SEMI               &trans
-&trans  &mt LEFT_SHIFT Z    &kp X      &kp C     &kp V             &kp B      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N      &kp M   &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH  &none
-&trans  &kp ESCAPE          &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &lt 1 TAB  &kp BSPC          &kp SPACE          &lt 3 RET  &none   &trans     &trans   &kp GLOBE              &none
+&trans  &trans              &trans     &trans    &trans              &trans                                          &trans     &trans  &trans     &trans   &trans                 &trans
+&trans  &kp Q               &kp W      &kp E     &kp R               &kp T                                           &kp Y      &kp U   &kp I      &kp O    &kp P                  &trans
+&trans  &mt LEFT_COMMAND A  &kp S      &kp D     &kp F               &kp G      &none             &trans             &kp H      &kp J   &kp K      &kp L    &kp SEMI               &trans
+&trans  &mt LEFT_SHIFT Z    &kp X      &kp C     &kp V               &kp B      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N      &kp M   &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH  &none
+&trans  &kp ESCAPE          &kp LCTRL  &kp LALT  &lt 2 LEFT_COMMAND  &lt 1 TAB  &kp BSPC          &kp SPACE          &lt 3 RET  &none   &trans     &trans   &kp GLOBE              &none
             >;
         };
 
