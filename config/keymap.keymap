@@ -8,10 +8,9 @@
     combos {
         compatible = "zmk,combos";
 
-        bt_clear {
-            bindings = <&bt BT_CLR>;
-            key-positions = <28 29>;
-            layers = <4>;
+        changeLang {
+            bindings = <&kp GLOBE>;
+            key-positions = <12 46>;
         };
     };
 
@@ -20,21 +19,31 @@
 
         base_layer {
             bindings = <
-&trans     &trans  &trans    &trans    &trans   &trans                             &trans     &trans     &trans     &trans    &trans    &trans
-&trans     &kp Q   &kp W     &kp E     &kp R    &kp T                              &kp Y      &kp U      &kp I      &kp O     &kp P     &trans
-&kp LCTRL  &kp A   &kp S     &kp D     &kp F    &kp G      &mkp LCLK    &mkp RCLK  &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X     &kp C     &kp V    &kp B      &lt 3 SPACE  &lt 2 RET  &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&trans     &trans  &kp LGUI  &kp LALT  &kp ESC  &lt 1 TAB  &kp BSPC     &kp SPACE  &lt 4 RET  &kp SPACE  &kp RALT   &kp RGUI  &trans    &trans
+&trans  &trans      &trans     &trans    &trans            &trans                          &trans     &trans     &trans     &trans   &trans    &trans
+&trans  &kp Q       &kp W      &kp E     &kp R             &kp T                           &kp Y      &kp U      &kp I      &kp O    &kp P     &trans
+&trans  &kp A       &kp S      &kp D     &kp F             &kp G      &mkp LCLK    &trans  &kp H      &kp J      &kp K      &kp L    &kp SEMI  &trans
+&trans  &kp Z       &kp X      &kp C     &kp V             &kp B      &lt 3 SPACE  &trans  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&trans  &kp ESCAPE  &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &lt 1 TAB  &kp BSPC     &trans  &lt 2 RET  &kp SPACE  &trans     &trans   &trans    &kp GLOBE
             >;
         };
 
         sym_layer {
             bindings = <
-&trans  &trans            &trans        &trans            &trans             &trans                         &trans     &trans     &trans            &trans                &trans           &trans
-&trans  &kp N1            &kp N2        &kp N3            &kp N4             &kp N5                         &kp N6     &kp N7     &kp N8            &kp N9                &kp N0           &trans
-&trans  &kp LEFT_COMMAND  &kp GRAVE     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans  &trans  &mkp MCLK  &mkp LCLK  &mkp RCLK         &kp NON_US_BACKSLASH  &kp SQT          &trans
-&trans  &kp LEFT_SHIFT    &kp LEFT_ALT  &kp LCTRL         &kp RIGHT_BRACE    &kp PIPE       &trans  &trans  &kp COMMA  &kp DOT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp RIGHT_SHIFT  &trans
-&trans  &trans            &trans        &trans            &trans             &trans         &trans  &trans  &trans     &trans     &trans            &trans                &trans           &trans
+&trans  &trans            &trans        &trans            &trans             &trans                         &trans     &trans     &trans     &trans                &trans           &trans
+&trans  &kp N1            &kp N2        &kp N3            &kp N4             &kp N5                         &kp N6     &kp N7     &kp N8     &kp N9                &kp N0           &trans
+&trans  &kp LEFT_COMMAND  &kp GRAVE     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans  &trans  &mkp MCLK  &mkp LCLK  &mkp RCLK  &kp NON_US_BACKSLASH  &kp SQT          &trans
+&trans  &kp LEFT_SHIFT    &kp LEFT_ALT  &kp LCTRL         &kp RIGHT_BRACE    &kp PIPE       &trans  &trans  &none      &trans     &trans     &trans                &kp RIGHT_SHIFT  &trans
+&trans  &trans            &trans        &trans            &trans             &trans         &trans  &trans  &trans     &kp SPACE  &trans     &trans                &trans           &trans
+            >;
+        };
+
+        sys_layer {
+            bindings = <
+&trans  &trans        &trans        &trans        &trans        &trans                      &trans     &trans          &trans          &trans           &trans   &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                  &kp HOME   &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp END  &trans
+&trans  &trans        &trans        &trans        &trans        &trans      &trans  &trans  &mkp LCLK  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &trans
+&trans  &bootloader   &sys_reset    &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &trans     &trans          &trans          &trans           &trans   &trans
+&trans  &trans        &trans        &trans        &trans        &trans      &trans  &trans  &trans     &trans          &trans          &trans           &trans   &trans
             >;
         };
 
@@ -45,36 +54,6 @@
 &trans  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &kp TAB  &trans  &trans  &kp LEFT  &kp DOWN   &kp RIGHT     &kp RET    &kp BSPC  &trans
 &trans  &kp F6     &kp F7    &kp F8    &kp F9     &kp F10  &trans  &trans  &kp HOME  &kp PG_DN  &kp END       &kp INS    &kp DEL   &trans
 &trans  &trans     &trans    &trans    &kp ESC    &trans   &trans  &trans  &trans    &trans     &trans        &trans     &trans    &trans
-            >;
-        };
-
-        mouse_layer {
-            bindings = <
-&trans  &trans     &trans    &trans        &trans        &trans                      &trans     &trans     &trans        &trans     &trans    &trans
-&trans  &kp F11    &kp F12   &out OUT_USB  &out OUT_BLE  &bt BT_NXT                  &kp HOME   &kp PG_UP  &kp PG_DN     &kp END    &kp ESC   &trans
-&trans  &kp LCTRL  &kp LALT  &kp LGUI      &kp LSHFT     &kp TAB     &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK     &kp RET    &kp BSPC  &trans
-&trans  &trans     &trans    &trans        &trans        &trans      &trans  &trans  &kp LEFT   &kp DOWN   &kp UP_ARROW  &kp RIGHT  &kp TAB   &trans
-&trans  &trans     &trans    &trans        &trans        &trans      &trans  &trans  &trans     &trans     &trans        &trans     &trans    &trans
-            >;
-        };
-
-        sys_layer {
-            bindings = <
-&trans  &trans        &trans        &trans        &trans        &trans                      &trans    &trans          &trans          &trans           &trans   &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                  &kp HOME  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &kp END  &trans
-&trans  &trans        &trans        &trans        &trans        &trans      &trans  &trans  &none     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &trans
-&trans  &bootloader   &sys_reset    &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &trans    &trans          &trans          &trans           &trans   &trans
-&trans  &trans        &trans        &trans        &trans        &trans      &trans  &trans  &trans    &trans          &trans          &trans           &trans   &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
