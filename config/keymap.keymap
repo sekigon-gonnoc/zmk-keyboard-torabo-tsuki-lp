@@ -25,6 +25,30 @@
         };
     };
 
+        behaviors {
+        cmd_a: cmd_a {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <120>;
+            bindings = <&kp LGUI>, <&kp A>;
+            display-name = "Cmd/A";
+        };
+
+        sft_z: sft_z {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <120>;
+            bindings = <&kp LSHFT>, <&kp Z>;
+            display-name = "Shift/Z";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -32,8 +56,8 @@
             bindings = <
 &trans  &trans              &trans     &trans    &trans              &trans                                          &trans     &trans  &trans     &trans   &trans                 &trans
 &trans  &kp Q               &kp W      &kp E     &kp R               &kp T                                           &kp Y      &kp U   &kp I      &kp O    &kp P                  &trans
-&trans  &mt LEFT_COMMAND A  &kp S      &kp D     &kp F               &kp G      &none             &trans             &kp H      &kp J   &kp K      &kp L    &kp SEMI               &trans
-&trans  &mt LEFT_SHIFT Z    &kp X      &kp C     &kp V               &kp B      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N      &kp M   &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH  &none
+&kp LCTRL &cmd_a   &kp S    &kp D    &kp F    &kp G      &mkp LCLK                    &mkp RCLK                  &kp H    &kp J    &kp K     &kp L    &kp SEMI   &kp SQT
+&kp LSHFT &sft_z   &kp X    &kp C    &kp V    &kp B      &lt 3 SPACE                  &lt 2 RET                   &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH   &kp RSHFT
 &trans  &kp ESCAPE          &kp LCTRL  &kp LALT  &lt 2 LEFT_COMMAND  &lt 1 TAB  &kp BSPC          &kp SPACE          &lt 3 RET  &none   &trans     &trans   &kp GLOBE              &none
             >;
         };
