@@ -76,7 +76,7 @@
 &trans  &kp ESCAPE      &hmt LS(LCTRL) TAB   &kp UP_ARROW    &trans               &trans                        &kp HOME       &kp LEFT_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp END          &trans
 &trans  &kp LG(SPACE)   &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp END       &trans  &trans  &kp PAGE_UP    &mkp MB1        &mkp MB2      &trans           &trans           &trans
 &trans  &kp LEFT_SHIFT  &kp LC(LEFT_ARROW)  &trans          &kp RC(RIGHT_ARROW)  &trans        &trans  &trans  &kp PAGE_DOWN  &trans          &trans        &trans           &kp RIGHT_SHIFT  &trans
-&trans  &bt BT_SEL 0    &bt BT_SEL 1        &bt BT_SEL 2    &bt BT_SEL 3         &bt BT_SEL 4  &trans  &trans  &trans         &trans          &trans        &trans           &kp LG(ESCAPE)   &trans
+&trans  &bt BT_SEL 0    &bt BT_SEL 1        &bt BT_SEL 2    &bt BT_SEL 3         &bt BT_SEL 4  &bt BT_CLR  &trans  &trans         &trans          &trans        &trans           &kp LG(ESCAPE)   &trans
             >;
         };
     };
