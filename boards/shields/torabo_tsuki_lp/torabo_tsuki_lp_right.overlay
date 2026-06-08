@@ -17,3 +17,14 @@
 &size_l_transform {
     col-offset = <7>;
 };
+
+&trackball_listener {
+    input-processors = <&zip_temp_layer 8 10000>;
+};
+
+&zip_temp_layer {
+    excluded-positions = <
+        28
+        29
+    >;
+};
