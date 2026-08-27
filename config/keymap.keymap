@@ -52,51 +52,51 @@
 
         layer_0 {
             bindings = <
-&trans  &trans                          &trans  &trans    &trans    &trans                                &trans       &trans    &trans     &trans    &trans     &trans
-&trans  &kp Q                           &kp L   &kp U     &kp COMMA &kp DOT                               &kp F        &kp W     &kp R      &kp Y     &kp P      &trans
-&trans  &kp E                           &kp I   &kp A     &kp O     &kp MINUS     &trans        &trans    &kp K        &kp T     &kp N      &kp S     &kp H      &trans
-&trans  &ctrl_or_scroll_toggle LCTRL 4  &mo 3   &mkp LCLK &kp C     &kp V         &kp RET       &kp TAB   &kp G        &kp D     &kp M      &kp J     &kp B      &trans
-&trans  &trans                          &trans  &trans    &trans    &lt 1 ESCAPE  &lt 2 SPACE   &kp RGUI  &kp RSHIFT   &kp RALT  &kp X      &kp Z     &trans     &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &kp Q  &kp L  &kp U  &kp COMMA  &kp DOT  &kp F  &kp W  &kp R  &kp Y  &kp P  &trans
+                &trans  &kp E  &kp I  &kp A  &kp O  &kp MINUS  &trans  &trans  &kp K  &kp T  &kp N  &kp S  &kp H  &trans
+                &trans  &ctrl_or_scroll_toggle LCTRL 4  &mo 3  &mkp LCLK  &kp C  &kp V  &kp RET  &kp TAB  &kp G  &kp D  &kp M  &kp J  &kp B  &trans
+                &trans  &mt LG(LALT) ESCAPE  &trans  &trans  &trans  &mo 1  &lt 2 SPACE  &kp RGUI  &kp RSHIFT  &kp RALT  &kp X  &kp Z  &kp RC(X)  &trans
             >;
         };
 
         layer_1 {
             bindings = <
-&trans  &trans      &trans   &trans        &trans    &trans                       &trans     &trans     &trans     &trans   &trans     &trans
-&trans  &kp N1      &kp N2   &kp N3        &kp N4    &kp N5                       &kp N6     &kp N7     &kp N8     &kp N9   &kp N0     &trans
-&trans  &kp LANG2   &kp LEFT &kp UP_ARROW  &kp DOWN  &kp RIGHT  &trans    &trans  &kp CARET  &kp BSLH   &kp AT     &kp SEMI &kp COLON  &trans
-&trans  &kp LANG1   &trans   &trans        &kp BSPC  &kp DELETE &trans    &trans  &trans     &kp UNDER  &kp LBKT   &kp RBKT &kp FSLH   &trans
-&trans  &trans      &trans   &trans        &trans    &trans     &trans    &trans  &trans     &trans     &trans     &trans   &trans     &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+                &trans  &kp LANG2  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &trans  &trans  &kp EQUAL  &kp INT_YEN  &kp LBKT  &kp SEMI  &kp SQT  &trans
+                &trans  &mt LCTRL LANG1  &trans  &kp LG(C)  &kp BSPC  &kp DELETE  &trans  &trans  &trans  &kp LS(INT_RO)  &kp RBKT  &kp BSLH  &kp FSLH  &trans
+                &trans  &trans  &trans  &trans  &trans  &mo 4  &mo 4  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans   &trans     &trans         &trans                    &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans   &trans     &trans         &trans                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5   &trans
-&trans  &trans  &kp HOME &kp PG_UP  &kp PAGE_DOWN  &kp END &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans  &trans   &trans     &trans         &trans  &trans    &trans  &kp F11 &kp F12 &trans  &trans  &trans   &trans
-&trans  &trans  &trans   &trans     &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans
+                &trans  &trans  &kp HOME  &kp PG_UP  &kp PAGE_DOWN  &kp END  &trans  &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+                &trans  &trans  &trans  &kp LG(V)  &kp RC(C)  &kp RC(G)  &trans  &trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
+                &trans  &trans  &trans  &trans  &trans  &mo 4  &mo 4  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans   &trans   &trans        &trans        &trans                          &trans  &trans &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &kp F15       &kp F16       &trans                          &trans  &trans &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &kp C_VOL_UP  &kp C_VOL_DN  &trans    &trans       &trans   &trans  &trans &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &mkp RCLK     &cmd_w        &trans    &trans       &trans   &trans  &trans &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &trans        &trans        &mkp MB4  &mkp MB5     &trans   &trans  &trans &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &kp F15  &kp F16  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &kp K_VOL_UP  &kp K_VOL_DN  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &mkp RCLK  &cmd_w  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
