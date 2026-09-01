@@ -1,4 +1,5 @@
 #define TORABO_TSUKI_LP_RIGHT 1
+#define TORABO_TSUKI_LP_MATRIX_COL_OFFSET 7
 
 #include "torabo_tsuki_lp.dtsi"
 #include <input/processors.dtsi>

@@ -1,12 +1,8 @@
-#include "kscan-4-direction-switch-layouts.dtsi"
-
 /{
     chosen {
-        zmk,physical-layout = &physical_layout_l_4_direction;
-        zmk,kscan = &kscan2;
-        zmk,battery = &non_lipo_battery;
+        zmk,kscan = &kscan_4_direction_switch_composite;
     };
-  
+
     kscan1: kscan1 {
         compatible = "zmk,kscan-4-direction-switch";
 
@@ -20,16 +16,14 @@
         wakeup-source;
     };
 
-    kscan2: kscan2 {
-        compatible = "zmk,kscan-composite";    
+    kscan_4_direction_switch_composite: kscan_4_direction_switch_composite {
+        compatible = "zmk,kscan-composite";
         rows = <6>;
         columns = <7>;
 
         matrix {
             kscan = <&kscan0>;
-#if defined(TORABO_TSUKI_LP_RIGHT)
-            col-offset = <7>;
-#endif
+            col-offset = <TORABO_TSUKI_LP_MATRIX_COL_OFFSET>;
         };
 
         4-direction {
@@ -39,3 +33,14 @@
     };
 };
 
+&physical_layout_s {
+    kscan = <&kscan_4_direction_switch_composite>;
+};
+
+&physical_layout_m {
+    kscan = <&kscan_4_direction_switch_composite>;
+};
+
+&physical_layout_l {
+    kscan = <&kscan_4_direction_switch_composite>;
+};

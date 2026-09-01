@@ -1,0 +1,3 @@
+name: kscan-4-direction-switch-central
+append:
+  DTS_EXTRA_CPPFLAGS: -DTORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH

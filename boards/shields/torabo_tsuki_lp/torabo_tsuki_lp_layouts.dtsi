@@ -47,6 +47,15 @@
             , <&key_physical_attrs 100 100 1150  300       0     0     0>
             , <&key_physical_attrs 100 100 1250  325       0     0     0>
             , <&key_physical_attrs 100 100 1350  360       0     0     0>
+#if defined(TORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH)
+            , <&key_physical_attrs 100 100  700  575       0     0     0>
+            , <&key_physical_attrs 100 100  700  775       0     0     0>
+            , <&key_physical_attrs 100 100  600  675       0     0     0>
+            , <&key_physical_attrs 100 100  800  675       0     0     0>
+            , <&key_physical_attrs 100 100  700  675       0     0     0>
+#elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
+            , <&key_physical_attrs 100 100  700  675       0     0     0>
+#endif
             ;
     };
 
@@ -104,6 +113,15 @@
             , <&key_physical_attrs 100 100 1350  325       0     0     0>
             , <&key_physical_attrs 100 100 1450  360       0     0     0>
             , <&key_physical_attrs 100 100 1550  360       0     0     0>
+#if defined(TORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH)
+            , <&key_physical_attrs 100 100  700  575       0     0     0>
+            , <&key_physical_attrs 100 100  700  775       0     0     0>
+            , <&key_physical_attrs 100 100  600  675       0     0     0>
+            , <&key_physical_attrs 100 100  800  675       0     0     0>
+            , <&key_physical_attrs 100 100  700  675       0     0     0>
+#elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
+            , <&key_physical_attrs 100 100  700  675       0     0     0>
+#endif
             ;
     };
 
@@ -175,52 +193,17 @@
             , <&key_physical_attrs 100 100 1350  425       0     0     0>
             , <&key_physical_attrs 100 100 1450  460       0     0     0>
             , <&key_physical_attrs 100 100 1550  460       0     0     0>
+#if defined(TORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH)
+            , <&key_physical_attrs 100 100  700  575       0     0     0>
+            , <&key_physical_attrs 100 100  700  775       0     0     0>
+            , <&key_physical_attrs 100 100  600  675       0     0     0>
+            , <&key_physical_attrs 100 100  800  675       0     0     0>
+            , <&key_physical_attrs 100 100  700  675       0     0     0>
+#elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
+            , <&key_physical_attrs 100 100  700  675       0     0     0>
+#endif
             ;
     };
-
-    // position_map_0 {
-    //     compatible = "zmk,physical-layout-position-map";
-    //     position_map_s_0 {
-    //         physical-layout = <&physical_layout_s>;
-    //         positions = <
-    //             0  1  2  3  4        5  6  7  8  9
-    //             10 11 12 13 14       15 16 17 18 19
-    //             20 21 22 23 24 25 26 27 28 29 30 31
-    //             32 33 34 35 36 37 38 39 40 41 42 43
-    //         >;
-    //     };
-    //     position_map_l_0 {
-    //         physical-layout = <&physical_layout_l>;
-    //         positions = <
-    //             13 14 15 16 17       18 19 20 21 22
-    //             25 26 27 28 29       32 33 34 35 36
-    //             39 40 41 42 43 44 45 46 47 48 49 50
-    //             53 54 55 56 57 58 59 60 61 62 63 64
-    //         >;
-    //     };
-    // };
-
-    // position_map_1 {
-    //     compatible = "zmk,physical-layout-position-map";
-    //     position_map_m_1 {
-    //         physical-layout = <&physical_layout_m>;
-    //         positions = <
-    //             0  1  2  3  4  5        6  7  8  9  10 11 
-    //             12 13 14 15 16 17       18 19 20 21 22 23
-    //             24 25 26 27 28 29 30 31 32 33 34 35 36 37
-    //             38 39 40 41 42 43 44 45 46 47 48 49 50 51
-    //         >;
-    //     };
-    //     position_map_l_1 {
-    //         physical-layout = <&physical_layout_l>;
-    //         positions = <
-    //             12 13 14 15 16 17       18 19 20 21 22 23
-    //             24 25 26 27 28 29       32 33 34 35 36 37
-    //             38 39 40 41 42 43 44 45 46 47 48 49 50 51
-    //             52 53 54 55 56 57 58 59 60 61 62 63 64 65
-    //         >;
-    //     };
-    // };
 
     position_map_1 {
         compatible = "zmk,physical-layout-position-map";
@@ -228,31 +211,79 @@
         position_map_s_1 {
             physical-layout = <&physical_layout_s>;
             positions = <
+#if defined(TORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH)
+                49 50 51 52 53 54       55 56 57 58 59 60
+                61 0  1  2  3  4        5  6  7  8  9  62
+                63 10 11 12 13 14 69 70 15 16 17 18 19 64
+                65 20 21 22 23 24 25 26 27 28 29 30 31 66
+                67 32 33 34 35 36 37 38 39 40 41 42 43 68
+                44 45 46 47 48
+#elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
+                45 46 47 48 49 50       51 52 53 54 55 56
+                57 0  1  2  3  4        5  6  7  8  9  58
+                59 10 11 12 13 14 65 66 15 16 17 18 19 60
+                61 20 21 22 23 24 25 26 27 28 29 30 31 62
+                63 32 33 34 35 36 37 38 39 40 41 42 43 64
+                44
+#else
                 44 45 46 47 48 49       50 51 52 53 54 55
                 56 0  1  2  3  4        5  6  7  8  9  57
                 58 10 11 12 13 14 64 65 15 16 17 18 19 59
                 60 20 21 22 23 24 25 26 27 28 29 30 31 61
                 62 32 33 34 35 36 37 38 39 40 41 42 43 63
+#endif
             >;
         };
         position_map_m_1 {
             physical-layout = <&physical_layout_m>;
             positions = <
+#if defined(TORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH)
+                57 58 59 60 61 62       63 64 65 66 67 68
+                0  1  2  3  4  5        6  7  8  9  10 11
+                12 13 14 15 16 17 69 70 18 19 20 21 22 23
+                24 25 26 27 28 29 30 31 32 33 34 35 36 37
+                38 39 40 41 42 43 44 45 46 47 48 49 50 51
+                52 53 54 55 56
+#elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
+                53 54 55 56 57 58       59 60 61 62 63 64
+                0  1  2  3  4  5        6  7  8  9  10 11
+                12 13 14 15 16 17 65 66 18 19 20 21 22 23
+                24 25 26 27 28 29 30 31 32 33 34 35 36 37
+                38 39 40 41 42 43 44 45 46 47 48 49 50 51
+                52
+#else
                 52 53 54 55 56 57       58 59 60 61 62 63
                 0  1  2  3  4  5        6  7  8  9  10 11 
                 12 13 14 15 16 17 64 65 18 19 20 21 22 23
                 24 25 26 27 28 29 30 31 32 33 34 35 36 37
                 38 39 40 41 42 43 44 45 46 47 48 49 50 51
+#endif
             >;
         };
         position_map_l_1 {
             physical-layout = <&physical_layout_l>;
             positions = <
+#if defined(TORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH)
                 0  1  2  3  4  5        6  7  8  9  10 11
                 12 13 14 15 16 17       18 19 20 21 22 23
                 24 25 26 27 28 29 30 31 32 33 34 35 36 37
                 38 39 40 41 42 43 44 45 46 47 48 49 50 51
                 52 53 54 55 56 57 58 59 60 61 62 63 64 65
+                66 67 68 69 70
+#elif defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
+                0  1  2  3  4  5        6  7  8  9  10 11
+                12 13 14 15 16 17       18 19 20 21 22 23
+                24 25 26 27 28 29 30 31 32 33 34 35 36 37
+                38 39 40 41 42 43 44 45 46 47 48 49 50 51
+                52 53 54 55 56 57 58 59 60 61 62 63 64 65
+                66
+#else
+                0  1  2  3  4  5        6  7  8  9  10 11
+                12 13 14 15 16 17       18 19 20 21 22 23
+                24 25 26 27 28 29 30 31 32 33 34 35 36 37
+                38 39 40 41 42 43 44 45 46 47 48 49 50 51
+                52 53 54 55 56 57 58 59 60 61 62 63 64 65
+#endif
             >;
         };
     };

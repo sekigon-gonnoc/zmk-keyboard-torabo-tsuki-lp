@@ -1,0 +1,5 @@
+name: split-input-hires-dial
+append:
+  EXTRA_DTC_OVERLAY_FILE: split-input-hires-dial.overlay
+  EXTRA_CONF_FILE: ../input-hires-dial/input-hires-dial.conf
+  DTS_EXTRA_CPPFLAGS: -DTORABO_TSUKI_LP_INPUT_HIRES_DIAL
