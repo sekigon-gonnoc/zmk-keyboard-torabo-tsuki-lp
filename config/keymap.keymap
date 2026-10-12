@@ -84,12 +84,13 @@
             #binding-cells = <0>;
             bindings = <&kp C_VOLUME_DOWN &kp C_VOLUME_DOWN &kp C_VOLUME_DOWN>;
             label = "VOLDOWN";
-        };    
+        };
+
         claude_launch: claude_launch {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LC(LA(SPACE))>;
-        label = "CLAUDE_LAUNCH";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(SPACE))>;
+            label = "CLAUDE_LAUNCH";
         };
     };
 
@@ -102,12 +103,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-        };    
+        };
 
         HoT_CL: HoT_CL {
             compatible = "zmk,behavior-hold-tap";
             label = "HOT_CL";
             bindings = <&claude_launch>, <&kp>;
+
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
@@ -119,11 +121,11 @@
 
         layer_0 {
             bindings = <
-&none       &none         &none         &none                     &none        &none                                              &none        &none  &none      &none     &none           &none
-&kp ESCAPE  &kp Q         &kp W         &kp E                     &kp R        &kp T                                              &kp Y        &kp U  &kp I      &kp O     &kp P           &kp BACKSPACE
-&kp TAB     &kp A         &kp S         &kp D                     &kp F        &kp G  &none                  &none                &kp H        &kp J  &kp K      &kp L     &kp MINUS       &none
-&kp LSHFT   &kp Z         &kp X         &kp C                     &kp V        &kp B  &kp LG(LA(SPACE))      &kp LC(F15)          &kp N        &kp M  &kp COMMA  &kp DOT   &kp UP_ARROW    &kp SLASH
-&kp LCTRL   &kp LEFT_GUI  &kp LEFT_ALT  &HoT_CL 0 LG(C)           &lt 1 SPACE  &mo 7  &lt 2 INTERNATIONAL_5  &kp INTERNATIONAL_4  &lt 6 ENTER  &none  &none      &kp LEFT  &kp DOWN_ARROW  &kp RIGHT
+&none       &none         &none         &none            &none        &none                                              &none        &none  &none      &none     &none           &none
+&kp ESCAPE  &kp Q         &kp W         &kp E            &kp R        &kp T                                              &kp Y        &kp U  &kp I      &kp O     &kp P           &kp BACKSPACE
+&kp TAB     &kp A         &kp S         &kp D            &kp F        &kp G  &none                  &none                &kp H        &kp J  &kp K      &kp L     &kp MINUS       &none
+&kp LSHFT   &kp Z         &kp X         &kp C            &kp V        &kp B  &kp LG(LA(SPACE))      &kp LC(F15)          &kp N        &kp M  &kp COMMA  &kp DOT   &kp UP_ARROW    &kp SLASH
+&kp LCTRL   &kp LEFT_GUI  &kp LEFT_ALT  &HoT_CL 0 LG(C)  &lt 1 SPACE  &mo 7  &lt 2 INTERNATIONAL_5  &kp INTERNATIONAL_4  &lt 6 ENTER  &none  &none      &kp LEFT  &kp DOWN_ARROW  &kp RIGHT
             >;
         };
 
@@ -149,11 +151,11 @@
 
         mouse {
             bindings = <
-&none           &none         &none             &none              &none                &none                        &none    &none      &none      &none  &none  &none
-&none           &none         &kp F2            &msc MOVE_Y(170)   &kp LC(KP_NUMBER_0)  &kp LA(F4)                   &none    &none      &mkp MCLK  &none  &none  &kp DELETE
-&none           &none         &msc MOVE_X(-85)  &msc MOVE_Y(-170)  &msc MOVE_X(85)      &none       &none  &none     &none    &mkp LCLK  &mkp RCLK  &none  &none  &none
-&kp LEFT_SHIFT  &none         &none             &none              &none                &none       &none  &none     &none    &mkp MB4   &mkp MB5   &none  &none  &none
-&kp LCTRL       &kp LEFT_GUI  &kp LEFT_ALT      &none              &none                &none       &none  &kp HOME  &kp END  &none      &none      &none  &none  &none
+&none           &none         &none             &none              &none                &none                                  &none    &none      &none      &none  &none  &none
+&none           &none         &kp F2            &msc MOVE_Y(170)   &kp LC(KP_NUMBER_0)  &kp LA(F4)                             &none    &none      &mkp MCLK  &none  &none  &kp DELETE
+&none           &none         &msc MOVE_X(-85)  &msc MOVE_Y(-170)  &msc MOVE_X(85)      &none       &none  &none               &none    &mkp LCLK  &mkp RCLK  &none  &none  &none
+&kp LEFT_SHIFT  &none         &none             &none              &none                &none       &none  &none               &none    &mkp MB4   &mkp MB5   &none  &none  &none
+&kp LCTRL       &kp LEFT_GUI  &kp LEFT_ALT      &none              &none                &none       &none  &HoT LC(HOME) HOME  &kp END  &none      &none      &none  &none  &none
             >;
         };
 
@@ -181,7 +183,7 @@
             bindings = <
 &none           &none             &none             &none             &none             &none                                        &none                &none         &none          &none          &none          &none
 &none           &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)                             &none                &none         &none          &none          &none          &kp DELETE
-&none           &none             &none             &none             &none             &none             &none          &none       &kp LC(KP_NUMBER_0)  &kp LCTRL     &kp LS(LCTRL)  &none          &none          &none
+&none           &none             &none             &none             &kp LC(F)         &kp LC(G)         &none          &none       &kp LC(KP_NUMBER_0)  &kp LCTRL     &kp LS(LCTRL)  &none          &none          &none
 &VolDown        &kp C_MUTE        &Volup            &kp LG(LC(V))     &none             &kp LS(LG(F))     &kp LS(LG(S))  &bt BT_CLR  &out OUT_USB         &out OUT_BLE  &none          &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3
 &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT        &kp LG(A)         &none             &none             &none          &none       &none                &none         &none          &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3
             >;
