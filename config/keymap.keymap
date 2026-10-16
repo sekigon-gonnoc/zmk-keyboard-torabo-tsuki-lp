@@ -85,13 +85,6 @@
             bindings = <&kp C_VOLUME_DOWN &kp C_VOLUME_DOWN &kp C_VOLUME_DOWN>;
             label = "VOLDOWN";
         };
-
-        claude_launch: claude_launch {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LA(SPACE))>;
-            label = "CLAUDE_LAUNCH";
-        };
     };
 
     behaviors {
