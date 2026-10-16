@@ -97,16 +97,6 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
-
-        HoT_CL: HoT_CL {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOT_CL";
-            bindings = <&claude_launch>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-        };
     };
 
     keymap {
