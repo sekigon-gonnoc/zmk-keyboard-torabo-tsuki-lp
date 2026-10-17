@@ -1,6 +1,6 @@
 // 4方向スイッチ試験ビルド用(左側に4方向スイッチ、各レイヤー末尾に5キー追加)。
 // 通常のキーマップ config/keymap.keymap に、各レイヤーの末尾5キーを足しただけのもの。
-// キー位置66〜70 = 上・下・左・右・押し込み。layer_0はスクロール、他レイヤーは&trans。
+// キー位置66〜70 = 上・下・左・右・押し込み。layer_0は上下左右=スクロール、押し込み=LG(LA(SPACE))、useful(レイヤー6)の押し込み=LS(LG(S))、他レイヤーは&trans。
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -119,7 +119,7 @@
 &kp TAB     &alt_a_stab   &kp S         &kp D            &kp F        &kp G  &none                  &none                &kp H        &kp J  &kp K      &kp L     &kp MINUS       &none
 &kp LSHFT   &kp Z         &kp X         &kp C            &kp V        &kp B  &kp LG(LA(SPACE))      &kp LC(F15)          &kp N        &kp M  &kp COMMA  &kp DOT   &kp UP_ARROW    &kp SLASH
 &kp LCTRL   &kp LEFT_GUI  &kp LEFT_ALT  &kp LG(LS(F23))  &lt 1 SPACE  &mo 7  &lt 2 INTERNATIONAL_5  &kp INTERNATIONAL_4  &lt 6 ENTER  &none  &none      &kp LEFT  &kp DOWN_ARROW  &kp RIGHT
-&msc MOVE_Y(170)  &msc MOVE_Y(-170)  &msc MOVE_X(-85)  &msc MOVE_X(85)  &none
+&msc MOVE_Y(170)  &msc MOVE_Y(-170)  &msc MOVE_X(-85)  &msc MOVE_X(85)  &kp LG(LA(SPACE))
             >;
         };
 
@@ -185,7 +185,7 @@
 &none           &kp LC(A)         &kp LC(S)         &kp LG(D)         &kp LC(F)         &kp LC(G)         &none                 &none       &kp LC(KP_NUMBER_0)  &kp LCTRL     &kp LS(LCTRL)  &none          &none          &none
 &VolDown        &kp C_MUTE        &Volup            &kp LG(LC(V))     &none             &kp LS(LG(F))     &kp LS(LG(S))         &bt BT_CLR  &out OUT_USB         &out OUT_BLE  &none          &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3
 &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT        &kp LG(A)         &kp LC(C)         &kp LC(X)         &HoT LC(LS(V)) LC(V)  &none       &none                &none         &none          &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3
-&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp LS(LG(S))
             >;
         };
 
