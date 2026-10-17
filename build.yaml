@@ -8,4 +8,14 @@ include:
     snippet: "studio-rpc-usb-uart split-central input-trackball input-listener input-split-listener"
     artifact-name: torabo_tsuki_lp_right_central
   - board: bmp_boost
+  - board: bmp_boost
+    shield: torabo_tsuki_lp_left
+    snippet: "studio-rpc-usb-uart kscan-4-direction-switch"
+    cmake-args: -DDTS_EXTRA_CPPFLAGS=-DKEYMAP_4WAY=1
+    artifact-name: torabo_tsuki_lp_left_peripheral_4way
+  - board: bmp_boost
+    shield: torabo_tsuki_lp_right
+    snippet: "studio-rpc-usb-uart split-central input-trackball input-listener input-split-listener kscan-4-direction-switch-central"
+    cmake-args: -DDTS_EXTRA_CPPFLAGS=-DKEYMAP_4WAY=1
+    artifact-name: torabo_tsuki_lp_right_central_4way
     shield: settings_reset
