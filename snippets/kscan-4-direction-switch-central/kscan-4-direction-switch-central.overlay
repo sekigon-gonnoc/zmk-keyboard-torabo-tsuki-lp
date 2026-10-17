@@ -1,0 +1,20 @@
+#include "../kscan-4-direction-switch/kscan-4-direction-switch-layouts.dtsi"
+
+/{
+    chosen {
+        zmk,physical-layout = &physical_layout_l_4_direction;
+        zmk,kscan = &kscan2;
+        zmk,battery = &non_lipo_battery;
+    };
+
+    kscan2: kscan2 {
+        compatible = "zmk,kscan-composite";
+        rows = <6>;
+        columns = <7>;
+
+        matrix {
+            kscan = <&kscan0>;
+            col-offset = <7>;
+        };
+    };
+};
