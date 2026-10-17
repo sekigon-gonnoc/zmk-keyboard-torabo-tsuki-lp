@@ -1,0 +1,3 @@
+name: kscan-4-direction-switch-central
+append:
+  EXTRA_DTC_OVERLAY_FILE: kscan-4-direction-switch-central.overlay
