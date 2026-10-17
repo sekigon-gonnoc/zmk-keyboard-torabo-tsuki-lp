@@ -37,13 +37,6 @@
             layers = <0>;
         };
 
-        altF4 {
-            bindings = <&kp LA(F4)>;
-            key-positions = <54 16>;
-            timeout-ms = <200>;
-            layers = <0>;
-        };
-
         rowdel {
             bindings = <&kp LC(MINUS)>;
             key-positions = <54 35>;
@@ -65,25 +58,13 @@
             timeout-ms = <400>;
         };
 
-        CAD {
-            bindings = <&kp LC(LA(DELETE))>;
+        dispreset {
+            bindings = <&kp LS(LC(LG(B)))>;
             key-positions = <12 23>;
-        };
-
-        ctrl {
-            bindings = <&kp LCTRL>;
-            key-positions = <65 23>;
         };
     };
 
     macros {
-        doublezero: doublezero {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp KP_NUMBER_0 &kp KP_NUMBER_0>;
-            label = "DOUBLEZERO";
-        };
-
         HDS: HDS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -113,7 +94,15 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+        alt_a_stab: alt_a_stab {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&kp LS(TAB)>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
         };
     };
 
@@ -122,71 +111,71 @@
 
         layer_0 {
             bindings = <
-&none       &none         &none         &none  &none  &none                                            &none  &none  &none      &none     &none           &none
-&kp ESCAPE  &kp Q         &kp W         &kp E  &kp R  &kp T                                            &kp Y  &kp U  &kp I      &kp O     &kp P           &kp BSPC
-&kp TAB     &kp A         &kp S         &kp D  &kp F  &kp G  &none                &none                &kp H  &kp J  &kp K      &kp L     &kp MINUS       &kp ENTER
-&kp LSHFT   &kp Z         &kp X         &kp C  &kp V  &kp B  &kp INTERNATIONAL_5  &kp INTERNATIONAL_4  &kp N  &kp M  &kp COMMA  &kp DOT   &kp UP_ARROW    &kp SLASH
-&kp LCTRL   &kp LEFT_GUI  &kp LEFT_ALT  &mo 1  &mo 7  &mo 2  &kp SPACE            &HoT RCTRL LC(F15)   &mo 6  &none  &none      &kp LEFT  &kp DOWN_ARROW  &kp RIGHT
+&none       &none         &none         &none            &none        &none                                              &none        &none  &none      &none     &none           &none
+&kp ESCAPE  &kp Q         &kp W         &kp E            &kp R        &kp T                                              &kp Y        &kp U  &kp I      &kp O     &kp P           &kp BACKSPACE
+&kp TAB     &alt_a_stab   &kp S         &kp D            &kp F        &kp G  &none                  &none                &kp H        &kp J  &kp K      &kp L     &kp MINUS       &none
+&kp LSHFT   &kp Z         &kp X         &kp C            &kp V        &kp B  &kp LG(LA(SPACE))      &kp LC(F15)          &kp N        &kp M  &kp COMMA  &kp DOT   &kp UP_ARROW    &kp SLASH
+&kp LCTRL   &kp LEFT_GUI  &kp LEFT_ALT  &kp LG(LS(F23))  &lt 1 SPACE  &mo 7  &lt 2 INTERNATIONAL_5  &kp INTERNATIONAL_4  &lt 6 ENTER  &none  &none      &kp LEFT  &kp DOWN_ARROW  &kp RIGHT
             >;
         };
 
         number {
             bindings = <
-&none   &none                       &none                       &none                       &none                       &none                                       &none                       &none                       &none                       &none                       &none                       &none
-&trans  &HoT LS(NUMBER_1) NUMBER_1  &HoT LS(NUMBER_2) NUMBER_2  &HoT LS(NUMBER_3) NUMBER_3  &HoT LS(NUMBER_4) NUMBER_4  &HoT LS(NUMBER_5) NUMBER_5                  &HoT LS(NUMBER_6) NUMBER_6  &HoT LS(NUMBER_7) NUMBER_7  &HoT LS(NUMBER_8) NUMBER_8  &HoT LS(NUMBER_9) NUMBER_9  &HoT LS(NUMBER_0) NUMBER_0  &trans
-&trans  &kp LEFT_BRACKET            &trans                      &trans                      &trans                      &trans                      &none   &none   &trans                      &kp LS(NUMBER_8)            &kp LS(NUMBER_9)            &kp MINUS                   &kp EQUAL                   &trans
-&trans  &trans                      &trans                      &kp LG(C)                   &none                       &none                       &trans  &trans  &trans                      &kp RBKT                    &kp BACKSLASH               &kp SINGLE_QUOTE            &kp SEMICOLON               &trans
-&trans  &trans                      &trans                      &none                       &none                       &none                       &trans  &trans  &trans                      &none                       &none                       &kp SLASH                   &kp INTERNATIONAL_1         &trans
+&none   &none                       &none                       &none                       &none                       &none                                       &none                       &none                       &none                         &none                               &none                                     &none
+&trans  &HoT LS(NUMBER_1) NUMBER_1  &HoT LS(NUMBER_2) NUMBER_2  &HoT LS(NUMBER_3) NUMBER_3  &HoT LS(NUMBER_4) NUMBER_4  &HoT LS(NUMBER_5) NUMBER_5                  &HoT LS(NUMBER_6) NUMBER_6  &HoT LS(NUMBER_7) NUMBER_7  &HoT LS(NUMBER_8) NUMBER_8    &HoT LS(NUMBER_9) NUMBER_9          &HoT LS(NUMBER_0) NUMBER_0                &trans
+&trans  &kp LEFT_BRACKET            &trans                      &trans                      &trans                      &trans                      &none   &none   &trans                      &kp LS(NUMBER_8)            &kp LS(NUMBER_9)              &HoT LS(MINUS) MINUS                &HoT LS(EQUAL) EQUAL                      &trans
+&trans  &trans                      &trans                      &trans                      &trans                      &trans                      &trans  &trans  &trans                      &HoT LS(RBKT) RBKT          &HoT LS(BACKSLASH) BACKSLASH  &HoT LS(SINGLE_QUOTE) SINGLE_QUOTE  &HoT LS(SEMICOLON) SEMICOLON              &trans
+&trans  &trans                      &trans                      &trans                      &trans                      &trans                      &trans  &trans  &trans                      &none                       &none                         &HoT LS(SLASH) SLASH                &HoT LS(INTERNATIONAL_1) INTERNATIONAL_1  &trans
             >;
         };
 
         function {
             bindings = <
-&none   &none    &none    &none    &none    &none                    &none             &none              &none             &none            &none            &none
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                   &kp KP_NUMLOCK    &kp LS(N8)         &kp LS(NUMBER_9)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
-&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &none   &none   &kp LS(MINUS)     &kp LS(SEMICOLON)  &kp MINUS         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
-&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans  &trans  &kp SINGLE_QUOTE  &kp LS(APOS)       &kp SLASH         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
-&trans  &trans   &trans   &none    &none    &none    &trans  &none   &none             &none              &none             &kp KP_NUMBER_0  &doublezero      &kp KP_DOT
+&none           &none         &none         &none    &none    &none                  &none             &none              &none             &none            &none            &none
+&none           &kp F1        &kp F2        &kp F3   &kp F4   &kp F5                 &kp KP_NUMLOCK    &kp LS(N8)         &kp LS(NUMBER_9)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
+&none           &kp F6        &kp F7        &kp F8   &kp F9   &kp F10  &none  &none  &kp LS(MINUS)     &kp LS(SEMICOLON)  &kp MINUS         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
+&kp LEFT_SHIFT  &kp F11       &kp F12       &kp F13  &kp F14  &kp F15  &none  &none  &kp SINGLE_QUOTE  &kp LS(APOS)       &kp SLASH         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
+&kp LCTRL       &kp LEFT_GUI  &kp LEFT_ALT  &none    &none    &none    &none  &none  &none             &none              &none             &kp KP_NUMBER_0  &kp COMMA        &kp KP_DOT
             >;
         };
 
         mouse {
             bindings = <
-&none   &none              &none              &none                &none   &none                     &none    &none  &none      &none      &none   &none
-&trans  &kp F2             &msc MOVE_Y(170)   &kp LC(KP_NUMBER_0)  &none   &kp F5                    &none    &none  &none      &mkp MCLK  &none   &kp DELETE
-&trans  &msc MOVE_X(-170)  &msc MOVE_Y(-170)  &msc MOVE_X(170)     &none   &none   &none   &none     &none    &none  &mkp LCLK  &mkp RCLK  &mo 9   &trans
-&trans  &none              &none              &none                &none   &none   &trans  &trans    &none    &none  &mkp MB4   &mkp MB5   &trans  &none
-&trans  &trans             &none              &none                &trans  &trans  &trans  &kp HOME  &kp END  &none  &none      &trans     &trans  &trans
+&none           &none         &none             &none              &none                &none                                  &none    &none      &none      &none  &none  &none
+&none           &none         &kp F2            &msc MOVE_Y(170)   &kp LC(KP_NUMBER_0)  &kp LA(F4)                             &none    &none      &mkp MCLK  &none  &none  &kp DELETE
+&none           &none         &msc MOVE_X(-85)  &msc MOVE_Y(-170)  &msc MOVE_X(85)      &none       &none  &none               &none    &mkp LCLK  &mkp RCLK  &none  &none  &none
+&kp LEFT_SHIFT  &none         &none             &none              &none                &none       &none  &none               &none    &mkp MB4   &mkp MB5   &none  &none  &none
+&kp LCTRL       &kp LEFT_GUI  &kp LEFT_ALT      &none              &none                &none       &none  &HoT LC(HOME) HOME  &kp END  &none      &none      &none  &none  &none
             >;
         };
 
         window {
             bindings = <
-&none   &none   &none   &none   &none   &none                   &none   &none   &none   &none            &none          &none
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &kp LC(LA(O))    &kp LC(LA(P))  &kp LC(LA(BACKSPACE))
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &none   &trans  &trans  &trans  &kp LA(LC(L))    &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LA(HOME)     &kp LC(T)      &kp LC(LS(T))
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none   &none   &kp LC(PAGE_UP)  &kp LC(F4)     &kp LC(PAGE_DOWN)
+&none  &none  &none  &none  &none          &none                &none  &none  &none  &none            &none       &none
+&none  &none  &none  &none  &none          &none                &none  &none  &none  &none            &none       &kp LC(LA(DELETE))
+&none  &none  &none  &none  &none          &none  &none  &none  &none  &none  &none  &none            &none       &none
+&none  &none  &none  &none  &kp LC(LA(V))  &none  &none  &none  &none  &none  &none  &kp LA(HOME)     &kp LC(T)   &kp LC(LS(T))
+&none  &none  &none  &none  &none          &none  &none  &none  &none  &none  &none  &kp LC(PAGE_UP)  &kp LC(F4)  &kp LC(PAGE_DOWN)
             >;
         };
 
         desktop {
             bindings = <
-&none   &none   &none   &none   &none   &none                   &none   &none   &none   &none             &none           &none
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans            &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &none   &trans  &trans  &trans  &trans            &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &kp LC(LG(D))   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none   &none   &kp LC(LG(LEFT))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none             &none           &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none             &none           &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none             &none           &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none             &kp LC(LG(D))   &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp LC(LG(LEFT))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))
             >;
         };
 
         useful {
             bindings = <
-&none           &none             &none             &none             &none             &none                                 &none         &none         &none   &none          &none          &none
-&trans          &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)                      &trans        &trans        &trans  &trans         &trans         &kp DELETE
-&trans          &trans            &kp LS(LG(S))     &trans            &trans            &trans            &none   &none       &trans        &trans        &trans  &trans         &trans         &trans
-&VolDown        &kp C_MUTE        &Volup            &kp LG(LC(V))     &trans            &trans            &trans  &bt BT_CLR  &out OUT_BLE  &out OUT_USB  &trans  &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3
-&kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT        &kp LG(A)         &trans            &trans            &trans  &trans      &trans        &none         &none   &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3
+&none           &none             &none             &none             &none             &none                                               &none                &none         &none          &none          &none          &none
+&none           &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)                                    &none                &kp LC(Z)     &kp LC(Y)      &none          &kp LC(P)      &kp DELETE
+&none           &kp LC(A)         &kp LC(S)         &kp LG(D)         &kp LC(F)         &kp LC(G)         &none                 &none       &kp LC(KP_NUMBER_0)  &kp LCTRL     &kp LS(LCTRL)  &none          &none          &none
+&VolDown        &kp C_MUTE        &Volup            &kp LG(LC(V))     &none             &kp LS(LG(F))     &kp LS(LG(S))         &bt BT_CLR  &out OUT_USB         &out OUT_BLE  &none          &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3
+&kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT        &kp LG(A)         &kp LC(C)         &kp LC(X)         &HoT LC(LS(V)) LC(V)  &none       &none                &none         &none          &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3
             >;
         };
 
@@ -209,16 +198,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-
-        mouseboost {
-            bindings = <
-&trans  &trans            &trans            &trans           &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &msc MOVE_Y(85)   &trans           &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &msc MOVE_X(-85)  &msc MOVE_Y(-85)  &msc MOVE_X(85)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &trans            &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &trans            &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
     };
 
     conditional_layers {
@@ -238,4 +217,7 @@
 
 &pointing_listener { input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) &zip_temp_layer 8 175>; };
 
-&zip_temp_layer { require-prior-idle-ms = <400>; };
+&zip_temp_layer {
+    require-prior-idle-ms = <400>;
+    excluded-positions = <14 15 16 17 20 23 26 27 28 33 34 38 47 48 52 53 54 59 60>;
+};
