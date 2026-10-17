@@ -1,2 +1,5 @@
-
+#ifdef KEYMAP_4WAY
+#include "torabo_tsuki_lp_4way_keymap.dtsi"
+#else
 #include "../../../config/keymap.keymap"
+#endif
