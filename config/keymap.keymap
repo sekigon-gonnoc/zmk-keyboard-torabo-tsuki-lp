@@ -4,6 +4,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#ifdef KEYMAP_4WAY
+#define FOUR_WAY_L0 &msc MOVE_Y(170) &msc MOVE_Y(-170) &msc MOVE_X(-85) &msc MOVE_X(85) &none
+#define FOUR_WAY_TRANS &trans &trans &trans &trans &trans
+#else
+#define FOUR_WAY_L0
+#define FOUR_WAY_TRANS
+#endif
 
 / {
     combos {
