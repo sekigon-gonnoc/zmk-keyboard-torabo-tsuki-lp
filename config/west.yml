@@ -1,14 +1,27 @@
 manifest:
   remotes:
+    - name: cormoran
+      url-base: https://github.com/cormoran
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
   projects:
+    # - name: zmk
+    #   remote: zmkfirmware
+    #   revision: v0.3
+    #   import: app/west.yml
+
+    - name: zmk-feature-runtime-combo
+      remote: cormoran
+      revision: main
+      import: true
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3
-      import: app/west.yml
+      remote: cormoran
+      revision: main+custom-studio-protocol
+      import:
+        file: app/west.yml
+        
     - name: zmk-component-bmp-boost
       remote: sekigon-gonnoc
       import: west.yml
