@@ -237,10 +237,6 @@ static struct bt_conn_cb power_mgmt_bt_conn_callbacks = {
     .disconnected = power_mgmt_bt_conn_disconnected_cb,
 };
 
-static void mouse_input_callback(struct input_event *evt) {
-    reset_idle_timer();
-}
-
 static int split_power_mgmt_init(void) {
     LOG_INF("Initializing split power management");
     
@@ -259,7 +255,26 @@ static int split_power_mgmt_init(void) {
     return 0;
 }
 
-INPUT_CALLBACK_DEFINE(DEVICE_DT_GET_OR_NULL(DT_NODELABEL(trackball)) , mouse_input_callback);
+#if ZEPHYR_VERSION_CODE >= ZEPHYR_VERSION(4, 0, 0)
+static void mouse_input_callback(struct input_event *evt, void *user_data) {
+    reset_idle_timer();
+}
+
+INPUT_CALLBACK_DEFINE(
+    DEVICE_DT_GET_OR_NULL(DT_NODELABEL(trackball)),
+    mouse_input_callback,
+    NULL
+);
+#else
+static void mouse_input_callback(struct input_event *evt) {
+    reset_idle_timer();
+}
+
+INPUT_CALLBACK_DEFINE(
+    DEVICE_DT_GET_OR_NULL(DT_NODELABEL(trackball)),
+    mouse_input_callback
+);
+#endif
 
 SYS_INIT(split_power_mgmt_init, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);
 
