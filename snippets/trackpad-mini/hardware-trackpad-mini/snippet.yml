@@ -1,0 +1,4 @@
+name: hardware-trackpad-mini
+append:
+  EXTRA_DTC_OVERLAY_FILE: hardware-trackpad-mini.overlay
+  EXTRA_CONF_FILE: hardware-trackpad-mini.conf

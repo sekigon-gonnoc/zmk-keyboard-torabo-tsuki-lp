@@ -1,0 +1,22 @@
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+
+/{
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        pointing_device_trackball_right_split: pointing_device_split@1 {
+            compatible = "zmk,input-split";
+            reg = <1>;
+        };
+    };
+
+    pointing_device_trackball_right_split_listener: pointing_device_trackball_right_split_listener {
+        compatible = "zmk,input-listener";
+        device = <&pointing_device_trackball_right_split>;
+        status = "okay";
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+                            &dynamic_processor_right>;
+    };
+};

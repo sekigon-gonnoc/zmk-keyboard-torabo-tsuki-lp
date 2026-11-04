@@ -1,0 +1,4 @@
+name: input-path-hires-dial-local-left
+append:
+  EXTRA_DTC_OVERLAY_FILE: input-path-hires-dial-local-left.overlay
+  DTS_EXTRA_CPPFLAGS: -DTORABO_TSUKI_LP_INPUT_HIRES_DIAL

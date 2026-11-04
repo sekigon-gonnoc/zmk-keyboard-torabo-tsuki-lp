@@ -1,0 +1,3 @@
+name: input-path-trackpad-mini-send-from-right
+append:
+  EXTRA_DTC_OVERLAY_FILE: input-path-trackpad-mini-send-from-right.overlay

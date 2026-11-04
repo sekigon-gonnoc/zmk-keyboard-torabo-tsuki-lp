@@ -1,0 +1,3 @@
+name: hardware-4-direction-switch
+append:
+  EXTRA_DTC_OVERLAY_FILE: hardware-4-direction-switch.overlay

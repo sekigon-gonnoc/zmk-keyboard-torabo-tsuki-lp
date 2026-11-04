@@ -1,0 +1,3 @@
+name: input-path-4-direction-switch-receive-from-peripheral
+append:
+  DTS_EXTRA_CPPFLAGS: -DTORABO_TSUKI_LP_KSCAN_4_DIRECTION_SWITCH

@@ -1,0 +1,3 @@
+name: input-path-trackball-receive-from-left
+append:
+  EXTRA_DTC_OVERLAY_FILE: input-path-trackball-receive-from-left.overlay

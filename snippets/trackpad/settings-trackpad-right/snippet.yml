@@ -1,0 +1,3 @@
+name: settings-trackpad-right
+append:
+  EXTRA_DTC_OVERLAY_FILE: settings-trackpad-right.overlay

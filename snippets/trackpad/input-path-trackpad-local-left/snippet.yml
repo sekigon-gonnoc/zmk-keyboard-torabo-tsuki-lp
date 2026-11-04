@@ -1,0 +1,3 @@
+name: input-path-trackpad-local-left
+append:
+  EXTRA_DTC_OVERLAY_FILE: input-path-trackpad-local-left.overlay

@@ -1,0 +1,43 @@
+#include "torabo_tsuki_lp_keymap_sensors.dtsi"
+
+/ {
+    dynamic_encoder_behavior: dynamic_encoder_behavior {
+        compatible = "sekigon,dynamic-behavior-runtime-encoder";
+        #binding-cells = <0>;
+    };
+
+    pointer_encoder_x: pointer_encoder_x {
+        compatible = "sekigon,dynamic-encoder-source";
+        source-name = "pointer-x";
+        label = "Pointer X";
+        sensor = <&pointer_encoder_sensor_x>;
+        sensor-index = <0>;
+        input-mode = "tick";
+        target-role = "keyboard-left";
+    };
+
+    pointer_encoder_y: pointer_encoder_y {
+        compatible = "sekigon,dynamic-encoder-source";
+        source-name = "pointer-y";
+        label = "Pointer Y";
+        sensor = <&pointer_encoder_sensor_y>;
+        sensor-index = <1>;
+        input-mode = "tick";
+        target-role = "keyboard-left";
+    };
+#if defined(TORABO_TSUKI_LP_DYNAMIC_HIRES_DIAL_SETTINGS)
+    hires_dial_source: hires_dial_source {
+        compatible = "sekigon,hires-dial-source";
+        source-name = "hires-dial";
+        label = "HIRES Dial";
+        sensor = <&dynamic_hires_dial_sensor>;
+        sensor-index = <2>;
+        input-unit = "microdegree";
+#if defined(TORABO_TSUKI_LP_HIRES_DIAL_RIGHT)
+        target-role = "keyboard-right";
+#else
+        target-role = "keyboard-left";
+#endif
+    };
+#endif
+};

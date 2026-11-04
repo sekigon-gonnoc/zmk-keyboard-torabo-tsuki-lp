@@ -1,0 +1,3 @@
+name: settings-trackball-left
+append:
+  EXTRA_DTC_OVERLAY_FILE: settings-trackball-left.overlay

@@ -1,27 +1,102 @@
 include:
   - board: bmp_boost
     shield: torabo_tsuki_lp_left
-    snippet: "studio-rpc-usb-uart split-central input-trackball input-listener"
-    artifact-name: torabo_tsuki_lp_left_central
+    snippet: >-
+      studio-rpc-usb-uart split-central dynamic-settings
+      hardware-trackball input-path-trackball-local-left settings-trackball-left
+    # input-path-hires-dial-receive-from-right settings-hires-dial-right
+    # input-path-trackpad-mini-receive-from-right settings-trackpad-mini-right
+    cmake-args: >-
+      -DCONFIG_ZMK_NEMU_LINK_PERIPHERAL_ID=1
+      -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+    # -DCONFIG_ZMK_NEMU_LINK_BOOT_ESB=y
+    artifact-name: torabo_tsuki_lp_left_central_nemu_link
+
   - board: bmp_boost
     shield: torabo_tsuki_lp_right
-    snippet: studio-rpc-usb-uart
-    artifact-name: torabo_tsuki_lp_right_peripheral
+    snippet: >-
+      studio-rpc-usb-uart
+    # hardware-hires-dial input-path-hires-dial-send-from-right
+    # hardware-trackpad-mini input-path-trackpad-mini-send-from-right
+    cmake-args: >-
+      -DCONFIG_ZMK_NEMU_LINK_PERIPHERAL_ID=0
+    # -DCONFIG_ZMK_NEMU_LINK_BOOT_ESB=y
+    artifact-name: torabo_tsuki_lp_right_peripheral_nemu_link
+
+  - board: nemu-link-dongle
+    snippet: >-
+      studio-rpc-usb-uart dynamic-settings
+      input-path-trackball-receive-from-left settings-trackball-left
+    # input-path-hires-dial-receive-from-right settings-hires-dial-right
+    # input-path-trackpad-mini-receive-from-right settings-trackpad-mini-right
+    artifact-name: torabo_tsuki_lp_left_trackball_nemu_link_dongle
+
+  - board: bmp_boost
+    shield: torabo_tsuki_lp_right
+    snippet: >-
+      studio-rpc-usb-uart split-central dynamic-settings
+      hardware-trackball input-path-trackball-local-right settings-trackball-right
+    # input-path-hires-dial-receive-from-left settings-hires-dial-left
+    # input-path-trackpad-mini-receive-from-left settings-trackpad-mini-left
+    cmake-args: >-
+      -DCONFIG_ZMK_NEMU_LINK_PERIPHERAL_ID=1
+      -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+    # -DCONFIG_ZMK_NEMU_LINK_BOOT_ESB=y
+    artifact-name: torabo_tsuki_lp_right_central_nemu_link
+
   - board: bmp_boost
     shield: torabo_tsuki_lp_left
-    snippet: studio-rpc-usb-uart
-    artifact-name: torabo_tsuki_lp_left_peripheral
-  - board: bmp_boost
-    shield: torabo_tsuki_lp_right
-    snippet: "studio-rpc-usb-uart split-central input-trackball input-listener"
-    artifact-name: torabo_tsuki_lp_right_central
+    snippet: >-
+      studio-rpc-usb-uart
+    #  hardware-hires-dial input-path-hires-dial-send-from-left
+    #  hardware-trackpad-mini input-path-trackpad-mini-send-from-left
+    cmake-args: >-
+      -DCONFIG_ZMK_NEMU_LINK_PERIPHERAL_ID=0
+    # -DCONFIG_ZMK_NEMU_LINK_BOOT_ESB=y
+    artifact-name: torabo_tsuki_lp_left_peripheral_nemu_link
+
+  - board: nemu-link-dongle
+    snippet: >-
+      studio-rpc-usb-uart dynamic-settings
+      input-path-trackball-receive-from-right settings-trackball-right
+    # input-path-hires-dial-receive-from-left settings-hires-dial-left
+    # input-path-trackpad-mini-receive-from-left settings-trackpad-mini-left
+    artifact-name: torabo_tsuki_lp_right_trackball_nemu_link_dongle
+
+
   - board: bmp_boost
     shield: torabo_tsuki_lp_left
-    snippet: "studio-rpc-usb-uart input-trackball input-split"
-    artifact-name: torabo_tsuki_lp_double_ball_left_peripheral
+    snippet: >-
+      studio-rpc-usb-uart split-central dynamic-settings
+      hardware-trackball input-path-trackball-local-left settings-trackball-left
+      input-path-trackball-receive-from-right settings-trackball-right
+    cmake-args: >-
+      -DCONFIG_ZMK_NEMU_LINK_PERIPHERAL_ID=0
+      -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+    # -DCONFIG_ZMK_NEMU_LINK_BOOT_ESB=y
+    artifact-name: torabo_tsuki_lp_double_ball_left_central_nemu_link
+
   - board: bmp_boost
     shield: torabo_tsuki_lp_right
-    snippet: "studio-rpc-usb-uart split-central input-trackball input-listener input-split-listener"
-    artifact-name: torabo_tsuki_lp_double_ball_right_central
+    snippet: >-
+      studio-rpc-usb-uart
+      hardware-trackball input-path-trackball-send-from-right
+    cmake-args: >-
+      -DCONFIG_ZMK_NEMU_LINK_PERIPHERAL_ID=1
+    # -DCONFIG_ZMK_NEMU_LINK_BOOT_ESB=y
+    artifact-name: torabo_tsuki_lp_double_ball_right_peripheral_nemu_link
+
+  - board: nemu-link-dongle
+    snippet: >-
+      studio-rpc-usb-uart dynamic-settings
+      input-path-trackball-receive-from-left settings-trackball-left
+      input-path-trackball-receive-from-right settings-trackball-right
+    artifact-name: torabo_tsuki_lp_nemu_link_dongle_double_ball
+
   - board: bmp_boost
     shield: settings_reset
+    artifact-name: torabo_tsuki_lp_settings_reset
+
+  - board: nemu-link-dongle
+    shield: settings_reset
+    artifact-name: torabo_tsuki_lp_nemu_link_dongle_settings_reset

@@ -1,0 +1,3 @@
+name: settings-trackpad-mini-left
+append:
+  EXTRA_DTC_OVERLAY_FILE: settings-trackpad-mini-left.overlay

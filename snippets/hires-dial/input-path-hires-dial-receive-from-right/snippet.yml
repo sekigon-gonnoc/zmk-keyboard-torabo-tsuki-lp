@@ -1,0 +1,5 @@
+name: input-path-hires-dial-receive-from-right
+append:
+  EXTRA_DTC_OVERLAY_FILE: input-path-hires-dial-receive-from-right.overlay
+  EXTRA_CONF_FILE: ../hires-dial.conf
+  DTS_EXTRA_CPPFLAGS: -DTORABO_TSUKI_LP_INPUT_HIRES_DIAL

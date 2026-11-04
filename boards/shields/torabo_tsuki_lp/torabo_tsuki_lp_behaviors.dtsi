@@ -1,0 +1,19 @@
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    dynamic_macro_manager: dynamic_macro_manager {
+        compatible = "sekigon,dynamic-macro-manager";
+    };
+
+    bt_clear: bt_clear {
+        compatible = "sekigon,dynamic-combo-slot";
+        slot-index = <0>;
+        target-role = "keyboard-left";
+        default-key-positions = <28 29>;
+        default-timeout-ms = <50>;
+        default-layer-mask = <4>;
+        default-binding = <&bt BT_CLR>;
+        default-release-mode = <0>;
+    };
+};

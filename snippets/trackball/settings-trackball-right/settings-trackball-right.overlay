@@ -1,0 +1,14 @@
+#include <input_processors/zmk-input-processor-pointer-settings.dtsi>
+
+/ {
+    dynamic_processor_right: dynamic_processor_right {
+        compatible = "zmk,input-processor-pointer";
+        #input-processor-cells = <0>;
+        status = "okay";
+        encoder-sensor-indices = <0 1>;
+    };
+
+    DYNAMIC_INPUT_PROCESSOR_POINTER_SETTINGS(
+        pointer_right_settings, "trackball-right", "keyboard-right", "Trackball Right",
+        dynamic_processor_right, "shared")
+};

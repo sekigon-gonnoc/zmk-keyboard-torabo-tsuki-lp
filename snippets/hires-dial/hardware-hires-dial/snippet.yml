@@ -1,0 +1,4 @@
+name: hardware-hires-dial
+append:
+  EXTRA_DTC_OVERLAY_FILE: hardware-hires-dial.overlay
+  EXTRA_CONF_FILE: ../hires-dial.conf

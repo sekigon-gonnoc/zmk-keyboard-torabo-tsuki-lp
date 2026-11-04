@@ -1,0 +1,33 @@
+/ {
+    chosen {
+        zmk,kscan = &kscan_4_direction_switch_composite;
+    };
+
+    kscan_4_direction_switch_composite: kscan_4_direction_switch_composite {
+        compatible = "zmk,kscan-composite";
+        rows = <6>;
+        columns = <7>;
+
+        matrix {
+            kscan = <&kscan0>;
+            col-offset = <TORABO_TSUKI_LP_MATRIX_COL_OFFSET>;
+        };
+
+        4-direction {
+            kscan = <&kscan1>;
+            row-offset = <5>;
+        };
+    };
+};
+
+&physical_layout_s {
+    kscan = <&kscan_4_direction_switch_composite>;
+};
+
+&physical_layout_m {
+    kscan = <&kscan_4_direction_switch_composite>;
+};
+
+&physical_layout_l {
+    kscan = <&kscan_4_direction_switch_composite>;
+};

@@ -1,0 +1,14 @@
+#include <input_processors/zmk-input-processor-pointer-settings.dtsi>
+
+/ {
+    dynamic_processor_trackpad_mini_left: dynamic_processor_trackpad_mini_left {
+        compatible = "zmk,input-processor-pointer";
+        #input-processor-cells = <0>;
+        status = "okay";
+        encoder-sensor-indices = <0 1>;
+    };
+
+    DYNAMIC_INPUT_PROCESSOR_POINTER_SETTINGS(
+        pointer_trackpad_mini_left_settings, "trackpad-mini-left", "keyboard-left", "Trackpad Mini Left",
+        dynamic_processor_trackpad_mini_left, "shared")
+};

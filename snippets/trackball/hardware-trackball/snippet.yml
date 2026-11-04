@@ -1,0 +1,4 @@
+name: hardware-trackball
+append:
+  EXTRA_DTC_OVERLAY_FILE: hardware-trackball.overlay
+  EXTRA_CONF_FILE: hardware-trackball.conf

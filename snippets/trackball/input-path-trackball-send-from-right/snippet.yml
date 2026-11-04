@@ -1,0 +1,3 @@
+name: input-path-trackball-send-from-right
+append:
+  EXTRA_DTC_OVERLAY_FILE: input-path-trackball-send-from-right.overlay

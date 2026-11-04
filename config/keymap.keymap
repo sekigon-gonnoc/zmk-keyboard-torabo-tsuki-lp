@@ -3,22 +3,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <behaviors/nemu_link.dtsi>
 
 #if defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
 #include <behaviors/hires_dial.dtsi>
 #endif
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        bt_clear {
-            bindings = <&bt BT_CLR>;
-            key-positions = <28 29>;
-            layers = <2>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -85,20 +76,24 @@
 };
 
 #if defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
+&none {
+    #sensor-binding-cells = <0>;
+};
+
 &{/keymap/layer_0} {
-    sensor-bindings = <&hires_dial_scroll 1 1>;
+    sensor-bindings = <&none &none &hires_dial_scroll 1 1>;
 };
 
 &{/keymap/layer_1} {
-    sensor-bindings = <&hires_dial_scroll 10 1>;
+    sensor-bindings = <&none &none &hires_dial_scroll 10 1>;
 };
 
 &{/keymap/layer_2} {
-    sensor-bindings = <&hires_dial_encoder C_VOL_UP C_VOL_DN>;
+    sensor-bindings = <&none &none &hires_dial_encoder C_VOL_UP C_VOL_DN>;
 };
 
 &{/keymap/layer_3} {
     /* Quarter-speed Radial Controller motion: output/input = 1/4. */
-    sensor-bindings = <&hires_dial_radial_controller 4 1>;
+    sensor-bindings = <&none &none &hires_dial_radial_controller 4 1>;
 };
 #endif

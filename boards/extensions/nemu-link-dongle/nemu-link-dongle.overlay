@@ -1,0 +1,17 @@
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+#include <nemu-link-full-scan.dtsi>
+#include "../../shields/torabo_tsuki_lp/torabo_tsuki_lp_layouts.dtsi"
+#include "../../shields/torabo_tsuki_lp/torabo_tsuki_lp_layout_transforms.dtsi"
+#include "../../shields/torabo_tsuki_lp/torabo_tsuki_lp_shared_settings.dtsi"
+
+/ {
+    chosen {
+        zmk,physical-layout = &physical_layout_l;
+    };
+
+    nemu_link {
+        compatible = "sekigon,nemu-link-radio";
+    };
+
+};

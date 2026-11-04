@@ -1,0 +1,4 @@
+name: dynamic-settings
+append:
+  EXTRA_DTC_OVERLAY_FILE: dynamic-settings.overlay
+  EXTRA_CONF_FILE: dynamic-settings.conf

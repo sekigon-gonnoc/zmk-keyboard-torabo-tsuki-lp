@@ -1,0 +1,27 @@
+/ {
+    chosen {
+        zmk,kscan = &kscan_hires_dial_composite;
+    };
+
+    hires_dial_scroll_listener {
+        compatible = "zmk,input-listener";
+        device = <&hires_dial_scroll>;
+    };
+
+    hires_dial_hscroll_listener {
+        compatible = "zmk,input-listener";
+        device = <&hires_dial_hscroll>;
+    };
+};
+
+&physical_layout_s {
+    kscan = <&kscan_hires_dial_composite>;
+};
+
+&physical_layout_m {
+    kscan = <&kscan_hires_dial_composite>;
+};
+
+&physical_layout_l {
+    kscan = <&kscan_hires_dial_composite>;
+};

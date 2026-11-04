@@ -1,0 +1,25 @@
+#ifndef TORABO_TSUKI_LP_KEYMAP_SENSORS_DTSI
+#define TORABO_TSUKI_LP_KEYMAP_SENSORS_DTSI
+
+/ {
+    pointer_encoder_sensor_x: pointer_encoder_sensor_x {
+        status = "disabled";
+    };
+
+    pointer_encoder_sensor_y: pointer_encoder_sensor_y {
+        status = "disabled";
+    };
+
+    keymap_sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+#if defined(TORABO_TSUKI_LP_INPUT_HIRES_DIAL)
+        sensors = <&pointer_encoder_sensor_x &pointer_encoder_sensor_y &dynamic_hires_dial_sensor>;
+        triggers-per-rotation = <20>;
+#else
+        sensors = <&pointer_encoder_sensor_x &pointer_encoder_sensor_y>;
+        triggers-per-rotation = <1>;
+#endif
+    };
+};
+
+#endif

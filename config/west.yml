@@ -6,13 +6,30 @@ manifest:
       url-base: https://github.com/sekigon-gonnoc
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3
+      url: https://github.com/sekigon-gonnoc/zmk
+      revision: v0.4+nemu-link
       import: app/west.yml
+    - name: zmk-feature-nemu-link
+      url: https://github.com/sekigon-gonnoc/zmk-feature-nemu-link
+      revision: zmk-v0.4
+      import: config/west.yml
+    - name: zmk-feature-dynamic-settings
+      remote: sekigon-gonnoc
+    - name: zmk-feature-dynamic-input-processor
+      remote: sekigon-gonnoc
+    - name: zmk-feature-dynamic-macro
+      remote: sekigon-gonnoc
+    - name: zmk-feature-dynamic-combo
+      remote: sekigon-gonnoc
+    - name: zmk-feature-dynamic-tap-dance
+      remote: sekigon-gonnoc
+    - name: zmk-feature-dynamic-encoder
+      remote: sekigon-gonnoc
+    - name: zmk-feature-nemu-link-scan
+      remote: sekigon-gonnoc
     - name: zmk-component-bmp-boost
       remote: sekigon-gonnoc
       import: west.yml
-      revision: v0.2
     - name: zmk-feature-status-led
       remote: sekigon-gonnoc
       revision: main
@@ -23,7 +40,7 @@ manifest:
       remote: sekigon-gonnoc
     - name: zmk-feature-cdc-acm-bootloader-trigger
       remote: sekigon-gonnoc
-      revision: v0.2
+      revision: main
     - name: zmk-feature-non-lipo-battery-management
       remote: sekigon-gonnoc
       revision: main
@@ -31,5 +48,7 @@ manifest:
       remote: sekigon-gonnoc
     - name: zmk-driver-hires-dial
       remote: sekigon-gonnoc
+      revision: dynamic-setting
+      path: zmk-modules/zmk-driver-hires-dial
   self:
     path: config

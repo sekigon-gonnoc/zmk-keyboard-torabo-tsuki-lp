@@ -1,0 +1,4 @@
+name: settings-hires-dial-right
+append:
+  EXTRA_CONF_FILE: settings-hires-dial-right.conf
+  DTS_EXTRA_CPPFLAGS: -DTORABO_TSUKI_LP_DYNAMIC_HIRES_DIAL_SETTINGS -DTORABO_TSUKI_LP_HIRES_DIAL_RIGHT

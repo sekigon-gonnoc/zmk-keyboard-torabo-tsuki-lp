@@ -1,0 +1,9 @@
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+
+&pointing_listener {
+    status = "okay";
+    device = <&pointing_device>;
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+                        &dynamic_processor_trackpad_right>;
+};

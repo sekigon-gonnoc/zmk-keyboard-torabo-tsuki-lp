@@ -1,3 +1,0 @@
-name: input-split-listener
-append:
-  EXTRA_DTC_OVERLAY_FILE: input-split-listener.overlay
