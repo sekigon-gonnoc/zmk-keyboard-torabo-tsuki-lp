@@ -1,6 +1,15 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 
+/* Listener index 0 is the local trackball; its wire register is always the left slot. */
+/ {
+    nemu_link_input_reg_left_listener_0 {
+        compatible = "sekigon,nemu-link-input-reg";
+        listener-index = <0>;
+        wire-reg = <0>;
+    };
+};
+
 &pointing_listener {
     status = "okay";
     device = <&pointing_device>;
