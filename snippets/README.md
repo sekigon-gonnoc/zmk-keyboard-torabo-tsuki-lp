@@ -25,7 +25,8 @@ DongleとBLE centralで共通です。受信先はbuild targetで決まります
 | 右側Peripheralから送信 (`reg = <1>`) | `input-path-trackball-send-from-right` |
 | 左側の入力を受信 (`reg = <0>`) | `input-path-trackball-receive-from-left` |
 | 右側の入力を受信 (`reg = <1>`) | `input-path-trackball-receive-from-right` |
-| 設定 | `settings-trackball-left` / `settings-trackball-right` |
+| ポインタ処理設定 | `settings-trackball-left` / `settings-trackball-right` |
+| PAW3222 sensor設定 | `settings-paw3222-left` / `settings-paw3222-right` |
 
 ## Trackpad / Trackpad Mini
 
@@ -69,7 +70,7 @@ snippetの組み合わせで送信経路を明示するために選択します�
 ```yaml
 snippet: >-
   studio-rpc-usb-uart split-central dynamic-settings
-  hardware-trackball input-path-trackball-local-left settings-trackball-left
+  hardware-trackball input-path-trackball-local-left settings-trackball-left settings-paw3222-left
   input-path-trackball-receive-from-right settings-trackball-right
 ```
 
@@ -77,7 +78,7 @@ snippet: >-
 
 ```yaml
 snippet: >-
-  hardware-trackball input-path-trackball-send-from-right
+  hardware-trackball input-path-trackball-send-from-right settings-paw3222-right
 ```
 
 Dongleで左右を受信する場合:

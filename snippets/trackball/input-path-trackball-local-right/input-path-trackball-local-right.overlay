@@ -1,8 +1,8 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 
-/* Listener index 0 is the local trackball; its wire register is always the right slot. */
 / {
+    /* Listener index 0 is the local trackball; its wire register is always the right slot. */
     nemu_link_input_reg_right_listener_0 {
         compatible = "sekigon,nemu-link-input-reg";
         listener-index = <0>;

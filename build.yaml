@@ -3,7 +3,7 @@ include:
     shield: torabo_tsuki_lp_left
     snippet: >-
       studio-rpc-usb-uart split-central dynamic-settings
-      hardware-trackball input-path-trackball-local-left settings-trackball-left
+      hardware-trackball input-path-trackball-local-left settings-trackball-left settings-paw3222-left
     # input-path-hires-dial-receive-from-right settings-hires-dial-right
     # input-path-trackpad-mini-receive-from-right settings-trackpad-mini-right
     cmake-args: >-
@@ -35,7 +35,7 @@ include:
     shield: torabo_tsuki_lp_right
     snippet: >-
       studio-rpc-usb-uart split-central dynamic-settings
-      hardware-trackball input-path-trackball-local-right settings-trackball-right
+      hardware-trackball input-path-trackball-local-right settings-trackball-right settings-paw3222-right
     # input-path-hires-dial-receive-from-left settings-hires-dial-left
     # input-path-trackpad-mini-receive-from-left settings-trackpad-mini-left
     cmake-args: >-
@@ -68,7 +68,7 @@ include:
     shield: torabo_tsuki_lp_left
     snippet: >-
       studio-rpc-usb-uart split-central dynamic-settings
-      hardware-trackball input-path-trackball-local-left settings-trackball-left
+      hardware-trackball input-path-trackball-local-left settings-trackball-left settings-paw3222-left
       input-path-trackball-receive-from-right settings-trackball-right
     cmake-args: >-
       -DCONFIG_ZMK_NEMU_LINK_PERIPHERAL_ID=0
@@ -80,7 +80,7 @@ include:
     shield: torabo_tsuki_lp_right
     snippet: >-
       studio-rpc-usb-uart
-      hardware-trackball input-path-trackball-send-from-right
+      hardware-trackball input-path-trackball-send-from-right settings-paw3222-right
     cmake-args: >-
       -DCONFIG_ZMK_NEMU_LINK_PERIPHERAL_ID=1
     # -DCONFIG_ZMK_NEMU_LINK_BOOT_ESB=y

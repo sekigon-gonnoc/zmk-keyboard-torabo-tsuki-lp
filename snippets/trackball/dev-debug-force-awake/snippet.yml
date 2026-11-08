@@ -1,0 +1,3 @@
+name: dev-debug-force-awake
+append:
+  EXTRA_DTC_OVERLAY_FILE: dev-debug-force-awake.overlay

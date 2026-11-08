@@ -1,0 +1,13 @@
+&paw3222_right_settings {
+    debug_force_awake {
+        compatible = "sekigon,dynamic-setting";
+        setting-name = "debug-force-awake";
+        label = "Force sensor awake (debug)";
+        help = "Set and verify the PAW3222 sleep bits for IRQ/MOTION comparisons.";
+        value-type = "bool";
+        default-property = "force-awake";
+        widget = "checkbox";
+        ui-subgroup = "Trackball debug";
+        on-change = "paw3222_dynamic_debug_force_awake_changed";
+    };
+};

@@ -1,0 +1,6 @@
+#include <settings/paw3222-dynamic-settings.dtsi>
+
+/
+{
+    PAW3222_DYNAMIC_SETTINGS_GROUP(paw3222_right_settings, right, pointing_device);
+};
