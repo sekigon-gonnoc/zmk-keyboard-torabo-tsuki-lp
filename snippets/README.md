@@ -7,6 +7,7 @@ Snippetはモジュール種別ごとのフォルダにまとめています。�
 - `trackpad-mini/`
 - `hires-dial/`
 - `4-direction-switch/`
+- `nemu-link-mic/`
 
 `dynamic-settings`や`split-central`などモジュール共通のsnippetは、この階層の直下に置いています。
 
@@ -62,6 +63,29 @@ snippetの組み合わせで送信経路を明示するために選択します�
 物理switchには `hardware-4-direction-switch` と `input-path-4-direction-switch-local` を
 組み合わせます。Peripheral側のswitch入力を受け取るBLE centralまたはDongleでは、
 `input-path-4-direction-switch-receive-from-peripheral` を選びます。このモジュールにDynamic Settingsはありません。
+
+## Nemu-link microphone
+
+| 役割 | snippet |
+| --- | --- |
+| PDMマイクと `&mic` behavior | `hardware-nemu-link-mic` |
+| 左右側からESB送信、PTT有効 | `input-path-nemu-link-mic-send-from-left/right` |
+| Dongleで左右側音声を受信してUSB Audioへ出力 | `input-path-nemu-link-mic-receive-from-left/right` |
+| owner/proxy向けDynamic Settings schema (left) | `settings-nemu-link-mic-left` |
+| owner/proxy向けDynamic Settings schema (right) | `settings-nemu-link-mic-right` |
+
+Peripheral:
+
+```yaml
+snippet: hardware-nemu-link-mic input-path-nemu-link-mic-send-from-right
+```
+
+送信元の側に応じて `send-from-left` / `send-from-right` を使います。
+Dongleは対応する `receive-from-left` / `receive-from-right` を追加します。
+受信先はUSB Audio Class 1です。StudioでPTTキーを割り当てる場合は、
+`hardware-nemu-link-mic` が追加する `&mic` behaviorを選択します。
+micの接続先は `CONFIG_ZMK_NEMU_LINK_MIC_SOURCE` で指定し、Studio接続先の
+`CONFIG_ZMK_NEMU_LINK_STUDIO_SOURCE` とは独立しています。
 
 ## Double ballの例
 

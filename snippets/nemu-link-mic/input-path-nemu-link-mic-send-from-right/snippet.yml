@@ -1,0 +1,3 @@
+name: input-path-nemu-link-mic-send-from-right
+append:
+  EXTRA_CONF_FILE: input-path-nemu-link-mic-send-from-right.conf

@@ -1,0 +1,17 @@
+&zephyr_udc0 {
+	mic_uac1: mic_uac1 {
+		compatible = "usb-audio-mic";
+		feature-mute;
+		channel-l;
+		resolution = <16>;
+		sample-rate-hz = <16000>;
+		sync-type = "Synchronous";
+	};
+};
+
+/ {
+	mic: mic {
+		compatible = "sekigon,nemu-link-behavior-mic";
+		#binding-cells = <0>;
+	};
+};

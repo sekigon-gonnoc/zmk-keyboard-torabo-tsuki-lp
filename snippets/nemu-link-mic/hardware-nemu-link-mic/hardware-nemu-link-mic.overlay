@@ -1,0 +1,54 @@
+#include <zephyr/dt-bindings/gpio/gpio.h>
+#include <zephyr/dt-bindings/pinctrl/nrf-pinctrl.h>
+
+#define MIC_PDM_PORT 0
+#define MIC_PDM_CLK_PIN 19
+#define MIC_PDM_DIN_PIN 18
+#define MIC_VDD_PIN 8
+#define MIC_FPC_GND1_PIN 16
+#define MIC_FPC_GND2_PIN 20
+
+/* PAW3222 is not used in this microphone build. */
+&spi0 {
+	status = "disabled";
+};
+
+&pinctrl {
+	mic_pdm_default: mic_pdm_default {
+		group1 {
+			psels = <NRF_PSEL(PDM_CLK, MIC_PDM_PORT, MIC_PDM_CLK_PIN)>,
+					<NRF_PSEL(PDM_DIN, MIC_PDM_PORT, MIC_PDM_DIN_PIN)>;
+		};
+	};
+
+	mic_pdm_sleep: mic_pdm_sleep {
+		group1 {
+			psels = <NRF_PSEL(PDM_CLK, MIC_PDM_PORT, MIC_PDM_CLK_PIN)>,
+					<NRF_PSEL(PDM_DIN, MIC_PDM_PORT, MIC_PDM_DIN_PIN)>;
+			low-power-enable;
+		};
+	};
+};
+
+&pdm0 {
+	status = "okay";
+	pinctrl-0 = <&mic_pdm_default>;
+	pinctrl-1 = <&mic_pdm_sleep>;
+	pinctrl-names = "default", "sleep";
+};
+
+/ {
+	mic_pins: mic-pins {
+		compatible = "sekigon,nemu-link-mic-pins";
+		pdm-clk-gpios = <&gpio0 MIC_PDM_CLK_PIN GPIO_ACTIVE_HIGH>;
+		pdm-din-gpios = <&gpio0 MIC_PDM_DIN_PIN GPIO_ACTIVE_HIGH>;
+		vdd-gpios = <&gpio0 MIC_VDD_PIN GPIO_ACTIVE_HIGH>;
+		fpc-gnd-gpios = <&gpio0 MIC_FPC_GND1_PIN GPIO_ACTIVE_HIGH>,
+					<&gpio0 MIC_FPC_GND2_PIN GPIO_ACTIVE_HIGH>;
+	};
+
+	mic: mic {
+		compatible = "sekigon,nemu-link-behavior-mic";
+		#binding-cells = <0>;
+	};
+};

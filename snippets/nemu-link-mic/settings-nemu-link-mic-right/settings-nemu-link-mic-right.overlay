@@ -1,0 +1,5 @@
+#include <settings/nemu-link-mic-dynamic-settings.dtsi>
+
+/ {
+	NEMU_LINK_MIC_DYNAMIC_SETTINGS_GROUP(mic_settings, "keyboard-right", 0);
+};

@@ -49,6 +49,7 @@ manifest:
     - name: zmk-driver-hires-dial
       remote: sekigon-gonnoc
       revision: dynamic-setting
-      path: zmk-modules/zmk-driver-hires-dial
+    - name: zmk-driver-nemu-link-mic
+      remote: sekigon-gonnoc
   self:
     path: config

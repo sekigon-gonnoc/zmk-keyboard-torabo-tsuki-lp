@@ -1,0 +1,3 @@
+name: settings-nemu-link-mic-right
+append:
+  EXTRA_DTC_OVERLAY_FILE: settings-nemu-link-mic-right.overlay

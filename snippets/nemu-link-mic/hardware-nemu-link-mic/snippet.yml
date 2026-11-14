@@ -1,0 +1,4 @@
+name: hardware-nemu-link-mic
+append:
+  EXTRA_CONF_FILE: hardware-nemu-link-mic.conf
+  EXTRA_DTC_OVERLAY_FILE: hardware-nemu-link-mic.overlay
