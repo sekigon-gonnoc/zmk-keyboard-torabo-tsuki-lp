@@ -633,7 +633,7 @@
         layer_1 {
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans                  &trans     &trans        &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans     &ctrl_click   &mo 5    　&kp LCTRL     &trans     &trans
+&trans  &trans  &trans  &trans     &trans     &trans                  &trans     &ctrl_click   &mo 5    　&zoom_scroll  &trans     &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &kp LC(S)  &mkp LCLK     &mo 6      &mkp RCLK  &kp LC(T)  &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &kp LC(Z)  &kp LC(X)     &kp LC(C)  &kp LC(V)  &kp LC(Y)  &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans     &trans        &trans     &trans     &trans     &trans
