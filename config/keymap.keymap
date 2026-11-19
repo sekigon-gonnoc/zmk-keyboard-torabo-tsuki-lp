@@ -143,6 +143,17 @@
          * Ctrl解放
          * ------------------------------------------------------------
          */
+        zoom_scroll: zoom_scroll {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+
+            bindings
+                = <&macro_press &kp LCTRL &mo 6>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo 6 &kp LCTRL>
+                ;
+        };
 
         ctrl_click: ctrl_click {
             compatible = "zmk,behavior-macro";
