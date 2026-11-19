@@ -8,6 +8,18 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors {
+        bspc_lt: bspc_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            display-name = "BSPC Repeat";
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <250>;
+            bindings = <&mo>, <&kp>;
+        };
+    };
+
     /*
      * ================================================================
      * Input Processors
@@ -609,7 +621,7 @@
 &kp TAB    &kp Q      &kp W     &kp E     &kp R     &kp T                                                    &kp Y        &kp U     &kp I      &kp O     &kp P         &kp BSPC
 &kp CAPS   &kp A      &kp S     &kp D     &kp F     &kp G        &mkp LCLK                       &mkp RCLK   &kp H        &kp J     &kp K      &kp L     &kp MINUS     &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V     &kp B        &kp SPACE                       &kp RET     &kp N        &kp M     &kp COMMA  &kp DOT   &kp TILDE     &kp RSHFT
-&kp LCTRL  &kp LCTRL  &kp LGUI  &kp TAB   &mt LSHIFT LANGUAGE_2  &kp SPACE  &mt LCTRL LANGUAGE_1  &lt 3 BSPC  &lt 2 ENTER &kp BSPC  &kp RALT   &kp RGUI  &kp RCTRL     &kp RCTRL
+&kp LCTRL  &kp LCTRL  &kp LGUI  &kp TAB   &mt LSHIFT LANGUAGE_2  &kp SPACE  &mt LCTRL LANGUAGE_1  &bspc_lt 3 BSPC  &lt 2 ENTER &kp BSPC  &kp RALT   &kp RGUI  &kp RCTRL     &kp RCTRL
             >;
         };
 
@@ -644,7 +656,7 @@
         layer_1 {
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans                  &trans     &trans        &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans     &ctrl_click   &mo 5      &zoom_scroll &trans     &trans
+&trans  &trans  &trans  &trans     &trans     &trans                  &trans     &ctrl_click   &mo 5     &zoom_scroll  &trans     &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &kp LC(S)  &mkp LCLK     &mo 6      &mkp RCLK  &kp LC(T)  &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &kp LC(Z)  &kp LC(X)     &kp LC(C)  &kp LC(V)  &kp LC(Y)  &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans     &trans        &trans     &trans     &trans     &trans
